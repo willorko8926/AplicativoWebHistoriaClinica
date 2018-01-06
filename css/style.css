@@ -591,6 +591,35 @@ font header .navbar-default .navbar-nav li a:hover {
 /*---------------------------------------------
 					Work Close 
 -----------------------------------------------*/
+
+/*=============================================*/
+/*---------------------------------------------
+					 Quienes Somos Start 
+-----------------------------------------------*/
+/*--
+	Formulario Start 
+--*/
+#quienes-form {
+  overflow: hidden;
+  padding: 80px 0;
+}
+#quienes-form .block p{
+  padding-bottom: 10px;
+  text-align: justify;
+}
+#quienes-form .quienes-img{
+  padding-top: 30px;
+  padding-left: 50px;
+}
+#quienes-form .quienes-img{
+  height: 90%;
+  width: 90%;
+}
+/*---------------------------------------------
+					Quienes Somos Close 
+-----------------------------------------------*/
+
+
 /*=============================================*/
 /*---------------------------------------------
 					 Contact Start 

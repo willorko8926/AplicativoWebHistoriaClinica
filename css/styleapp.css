@@ -25,6 +25,11 @@ h3 {
   font-size: 28px;
   font-weight: 300;
 }
+h4.underline {
+  font-size: 22px;
+  font-weight: 400;
+  border-bottom: 1px solid #8c8b8b;
+}
 p {
   font-size: 15px;
   line-height: 28px;

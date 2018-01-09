@@ -91,64 +91,211 @@
         <!-- contact form start -->
         <section id="registrarse-form">
           <div class="container">
-            <div class="col-md-12 col-sm-12">
-              <div class="block">
-                <p>*Campos Obligatorios</p>
-                <legend>Información Personal</legend>
-                <form>
-                  <div class="form-group">
-                    <label class="form-label">* Tipo Identificación:</label>
-                    <select name="cmbTipoId" class="form-control">
+            <div class="block">
+              <form>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                      <p>*Campos Obligatorios</p>
+                      <legend>Información Personal</legend>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Tipo Identificación:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <select name="cmbTipoId" class="form-control" autofocus="autofocus">
                         <option selected="selected" value="1">DNI - Doc. Nacional Identificación</option>
                         <option value="2">PAS - Pasaporte</option>
-                    </select>
+                      </select>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label class="form-label">* Num. Identificación:</label>
-                    <input type="text" class="form-control" placeholder="Num. Identificación">
-                    <label class="form-label">* Primer Nombre:</label>
-                    <input type="text" class="form-control" placeholder="Primer Nombre">
-                    <label class="form-label">Segundo Nombre:</label>
-                    <input type="text" class="form-control" placeholder="Segundo Nombre">
-                    <label class="form-label">* Apellido Paterno:</label>
-                    <input type="text" class="form-control" placeholder="Apellido Paterno">
-                    <label class="form-label">Apellido Materno:</label>
-                    <input type="text" class="form-control" placeholder="Apellido Materno">
-                    <label class="form-label">* Fecha Nacimiento:</label>
-                    <input type="date" class="form-control" placeholder="Fecha Nacimiento">
-                    <label class="form-label">* Sexo:</label>
-                    <select name="cmbSexo" class="form-control">
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Num. Identificación:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="text" class="form-control" placeholder="Num. Identificación">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Primer Nombre:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="text" class="form-control" placeholder="Primer Nombre">
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">Segundo Nombre:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="text" class="form-control" placeholder="Segundo Nombre">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Apellido Paterno:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="text" class="form-control" placeholder="Apellido Paterno">
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">Apellido Materno:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="text" class="form-control" placeholder="Apellido Materno">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Fecha Nacimiento:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="date" class="form-control" placeholder="Fecha Nacimiento">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Sexo:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <select name="cmbSexo" class="form-control">
                         <option selected="selected" value="M">Masculino</option>
                         <option value="F">Femenino</option>
-                    </select>
-                    <label class="form-label">* Estado Civil:</label>
-                    <select name="cmbEstadoCivil" class="form-control">
+                      </select>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Estado Civil:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <select name="cmbEstadoCivil" class="form-control">
                         <option selected="selected" value="S">Soltero</option>
                         <option value="C">Casado</option>
                         <option value="D">Divorciado</option>
                         <option value="V">Viudo</option>
                         <option value="U">Unión Hecho</option>
-                    </select>
+                      </select>
+                    </div>
                   </div>
-                </form>
-                <p></p>
-                <legend>Información de Contacto</legend>
-                <form>
-                  <div class="form-group">
-                    <label class="form-label">* Dirección:</label>
-                    <input type="text" class="form-control" placeholder="Dirección">
-                    <label class="form-label">* Teléfono:</label>
-                    <input type="text" class="form-control" placeholder="Teléfono">
-                    <label class="form-label">* Celular:</label>
-                    <input type="text" class="form-control" placeholder="Celular">
-                    <label class="form-label">* Correo Electrónico:</label>
-                    <input type="email" class="form-control" placeholder="Correo Electrónico">
+                  <div class="row"><p></p></div>
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                      <legend>Información de Ubicación y Contacto</legend>
+                    </div>
                   </div>
-                </form>
-              </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Dirección:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="text" class="form-control" placeholder="Dirección">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Teléfono:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="text" class="form-control" placeholder="Teléfono">
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Celular:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="text" class="form-control" placeholder="Celular">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Correo Electrónico:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="email" class="form-control" placeholder="Correo Electrónico">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">Nacionalidad:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="text" class="form-control" placeholder="Nacionalidad">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">País Residencia:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <select name="cmbPaisRes" class="form-control">
+                        <option selected="selected" value="ECU">Ecuador</option>
+                        <option value="COL">Colombia</option>
+                        <option value="VEN">Venezuela</option>
+                        <option value="BRA">Brasil</option>
+                        <option value="BOL">Bolivia</option>
+                        <option value="PER">Perú</option>
+                        <option value="URU">Uruguay</option>
+                        <option value="PAR">Paraguay</option>
+                        <option value="CHL">Chile</option>
+                        <option value="ARG">Argentina</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">Ciudad Residencia:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <select name="cmbCiudadRes" class="form-control">
+                        <option selected="selected" value="GYE">Guayaquil</option>
+                        <option value="UIO">Quito</option>
+                        <option value="CUE">Cuenca</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row"><p></p></div>
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                      <legend>Cuenta de Usuario para Acceso</legend>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Username:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="text" class="form-control" placeholder="Username">
+                      <p class="note-form">Este será su usuario para el ingreso al sistema.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Clave:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="password" class="form-control" placeholder="Clave">
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Confirmación Clave:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <input type="password" class="form-control" placeholder="Confirmación">
+                    </div>
+                  </div>
+                  <div class="row"><p></p></div>
+                  <div class="row">
+                    <div class="col-md-10 col-sm-10"></div>
+                    <div class="col-md-2 col-sm-2">
+                      <input type="submit" id="btnRegistrar" class="btn btn-app" value="Registrar">
+                      <!--<button type="submit" id="btnRegistrar" class="btn btn-app">Registrar</button>!-->
+                      <!--button type="submit" class="btn btn-primary" id="signup_button" data-disable-with="Creating account&hellip;">Create an account</button> !-->
+                    </div>
+                  </div>
+
+                </div>
+              </form>
             </div>
           </div>
         </section>
+                  
         <!-- Call to action Start -->
       <!-- Call to action Start -->
     <section id="call-to-action">

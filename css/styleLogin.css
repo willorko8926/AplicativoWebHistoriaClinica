@@ -30,6 +30,17 @@ a:hover {
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
+
+.formLarge {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 1800px;
+  max-width: 1200px;
+  margin: 400px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+
 .tab-group {
   list-style: none;
   padding: 0;

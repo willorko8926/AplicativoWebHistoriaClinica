@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/examlab.css">
+      
+    <link rel="stylesheet" href="css/demo.css">
     
     <!-- Js -->
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -82,7 +84,7 @@
             <div class="row">
               <div class="col-md-6 col-sm-6">
                 <div class="block">
-                  <h1>Informe de Exámenes de Laboratorio</h1>
+                  <h1>Informe de Consulta Externa</h1>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
@@ -98,59 +100,68 @@
           <div class="container">
             <div class="block">
               <div class="row">
-                <div class="col-md-12 col-sm-12">
-                  <h5>Información Resumida de los Últimos Exámenes de Laboratorio del Usuario</h5>
-                </div>
               </div>
               <table id="examen-list">
                 <tr>
-                  <th class="col-center">Fecha del Análisis</th>
-                  <th class="col-left">Tipo de Examen</th>
-                  <th class="col-left">Institución Responsable</th>
-                  <th class="col-left">Médico Solicitante</th>
+                  <th class="col-center">Fecha Consulta</th>
+                  <th class="col-left">Unidad Médica</th>
+                  <th class="col-left">Especialidad</th>
+                  <th class="col-left">Médico Tratante</th>
                   <th class="col-center">Detalle</th>
                 </tr>
                 <tr>
                   <td class="col-center">04/01/2018</td>
-                  <td class="col-left">Hemograma Completo</td>
                   <td class="col-left">Hospital Luis Vernaza</td>
+                  <td class="col-left">Medicina General</td>
                   <td class="col-left">Dr. Johnny Cabezas</td>
-                  <td class="col-center"><input type="button" id="btnDetalle1" class="btn-grip" value="..."></td>
+                  <td class="col-center"><input type="button" id="btnDetalle1" class="btn-grip" value="..." data-type="zoomin"></td>
                 </tr>
                 <tr>
                   <td class="col-center">20/12/2017</td>
-                  <td class="col-left">Examen Cultivo Amigdalas</td>
                   <td class="col-left">Hospital Luis Vernaza</td>
+                  <td class="col-left">Gastroenterología</td>
                   <td class="col-left">Dr. Marco Vintimilla</td>
-                  <td class="col-center"><input type="button" id="btnDetalle2" class="btn-grip" value="..."></td>
+                  <td class="col-center"><input type="button" id="btnDetalle2" class="btn-grip" value="..." data-type="zoomin"></td>
                 </tr>
                 <tr>
                   <td class="col-center">05/02/2017</td>
-                  <td class="col-left">Perfil Lípido y Tiroide</td>
-                  <td class="col-left">INTERLAB S.A.</td>
-                  <td class="col-left">Dr. Marco Vintimilla</td>
-                  <td class="col-center"><input type="button" id="btnDetalle3" class="btn-grip" value="..."></td>
+                  <td class="col-left">Clínica Kennedy Alborada</td>
+                  <td class="col-left">Urología</td>
+                  <td class="col-left">Dr. Julio Vintimilla</td>
+                  <td class="col-center">
+                      <input type="button" id="btnDetalle3" class="btn-grip" value="..." data-type="zoomin"></td>
                 </tr>
                 <tr>
                   <td class="col-center">15/10/2016</td>
-                  <td class="col-left">Resonancia Magnética</td>
-                  <td class="col-left">CERID S.A.</td>
+                  <td class="col-left">Clínica San Francisco</td>
+                  <td class="col-left">Oftalmología</td>
                   <td class="col-left">Dr. Héctor Carrillo</td>
-                  <td class="col-center"><input type="button" id="btnDetalle4" class="btn-grip" value="..."></td>
+                  <td class="col-center"><input type="button" id="btnDetalle4" class="btn-grip" value="..." data-type="zoomin"></td>
                 </tr>                  
               </table>
+             <div class="overlay-container">
+		        <div class="window-container zoomin">
+			        <h3>Detalles de consulta</h3> 
+			        <br><b>Diagnóstico:</b>  Enfermedad general<br/>
+			        <br><b>Tratamiento:</b>  Administración de antibióticos<br/>
+                    <br><b>Prescripción:</b>  Paracetamol<br/>
+			        <span class="close">Cerrar</span>
+		       </div>
+	         </div>
+	
               <div class="row"><p></p></div>
               <div class="row"><p></p></div>
               <div class="row">
                 <div class="col-md-10 col-sm-10"></div>
                 <div class="col-md-2 col-sm-2">
-                  <input type="submit" id="btnRegistrar" class="btn btn-app" value="Regresar" 
+                  <input type="button" id="btnRegresar" class="btn btn-app" value="Regresar"
                          onclick="window.location='HCE-Main.html';">
                 </div>
               </div>
 
             </div>
           </div>
+            
         </section>
                   
         <!-- Call to action Start -->
@@ -162,7 +173,7 @@
             <div class="block">
               <h2>Experiencia de Usuario.</h2>
               <p>Ver las experiencia de nuestro usuarios nos da ese empujon a seguir actualizando nuestros contenidos, no es solo una pagina es un sitio pensado en tí.</p>
-              <a class="btn btn-default btn-call-to-action" href="#">Ver Historias</a>
+              <a class="btn btn-default btn-call-to-action" href="#" >Ver Historias</a>
             </div>
           </div>
         </div>
@@ -186,5 +197,7 @@
         </div>
       </div>
     </footer>
+      <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.7.1.min.js"%3E%3C/script%3E'))</script>
+	<script src="js/demo.js"></script>
   </body>
 </html>

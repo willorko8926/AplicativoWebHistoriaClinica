@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+
+?>
+
 <html lang="es">
   <head>
     <link rel="icon" type="image/png" href="img/logo-nave.ico">   
@@ -55,18 +58,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                   <img src="img/LOGE.png" alt="Logo">
                 </a>
               </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="somos.html">Nosotros</a></li>
-                    <li><a href="servicios.html">Servicio</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="somos.php">Nosotros</a></li>
+                    <li><a href="servicios.php">Servicio</a></li>
+                    <li><a href="contact.php">Contacto</a></li>
+                    <li><a href="login.php">Iniciar Sesión</a></li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
@@ -285,7 +288,8 @@
                   <div class="row">
                     <div class="col-md-10 col-sm-10"></div>
                     <div class="col-md-2 col-sm-2">
-                      <input type="submit" id="btnRegistrar" class="btn btn-app" value="Registrar">
+                     
+                      <input type="submit" id="btnRegistrar" class="btn btn-app" value="Registrar" onclick="window.location='login.php';">
                       <!--<button type="submit" id="btnRegistrar" class="btn btn-app">Registrar</button>!-->
                       <!--button type="submit" class="btn btn-primary" id="signup_button" data-disable-with="Creating account&hellip;">Create an account</button> !-->
                     </div>
@@ -320,10 +324,10 @@
           <div class="col-md-12">
             <div class="footer-manu">
               <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="somos.html">Nosotros</a></li>
-                <li><a href="servicios.html">Servicio</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="somos.php">Nosotros</a></li>
+                <li><a href="servicios.php">Servicio</a></li>
+                <li><a href="contact.php">Contacto</a></li>
               </ul>
             </div>
           </div>

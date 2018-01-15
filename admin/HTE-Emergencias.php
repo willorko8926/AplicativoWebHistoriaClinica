@@ -1,14 +1,18 @@
+<?php
+$nombreusuario = $_POST['nombreusuario'];
+
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <link rel="icon" type="image/png" href="../img/logo-nave.ico">   
+    <link rel="icon" type="image/png" href="../img/logo-nave.ico">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Medikal-HCE</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/owl.carousel.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -18,7 +22,7 @@
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/registro.css">
-    
+
     <!-- Js -->
     <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="/..//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -39,44 +43,8 @@
 
   </head>
   <body>
- <!-- Header Start -->
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <!-- header Nav Start -->
-          <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                  <img src="../img/LOGE.png" alt="Logo">
-                </a>
-              </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-right">
-                       <li><a href="HCE-Main.html">Main</a></li>
-                <li><a href="HCE-ConsultaExterna.html">C.Externa</a></li>
-                  <li><a href="HCE-FichaUsuario.html">Ficha usuario</a></li>
-                  <li><a href="HCE-HistoriaResum.html">H. Resumida</a></li>
-                  <li><a href="HCE-Laboratorio.html">Laboratorio</a></li>
-                 <li><a href="HTE-Emergencias.html">Emergencia </a></li>
-                  </ul>
-                </div><!-- /.navbar-collapse -->
-              </div><!-- /.container-fluid -->
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header><!-- header close -->
-       
+
+
         <!-- Slider Start -->
         <section id="global-header">
           <div class="container">
@@ -85,6 +53,7 @@
                 <div class="block">
                   <h1>Registro de Emergencias</h1>
                   <!--<p>Somos un grupo de jóvenes que innovamos para mejorar la calidad de vida de las personas</p> -->
+
                 </div>
               </div>
             </div>
@@ -97,23 +66,23 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-md-12 col-sm-12">
-                    
+
                       <h4 class="underline">Historial de Emergencias</h4>
                     </div>
                   </div>
-                
-                
+
+
                   </div>
                   <div class="row">
-                   
+
                            <div class="col-md-2 col-sm-2">
                       <label class="form-label">Fecha:</label>
                     </div>
                     <div class="col-md-4 col-sm-4">
                          <label class="form-label">1 de Enero/2018</label>
-                    
-                    </div> 
-                      
+
+                    </div>
+
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">Tipo de Emergencia:</label>
                     </div>
@@ -127,29 +96,29 @@
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">Descripcion:</label>
                     </div>
-                      
+
                     <div class="col-md-4 col-sm-4">
               <textarea name="comentarios" rows="5" cols="100">El pasiente se quebro las manos</textarea>
                     </div>
-                  
-                  
+
+
                   </div>
                   <div class="row"><p></p></div>
                   <div class="row">
                     <div class="col-md-12 col-sm-12">
                     </div>
                   </div>
-                
+
                    <div class="row">
-                   
+
                            <div class="col-md-2 col-sm-2">
                       <label class="form-label">Fecha:</label>
                     </div>
                     <div class="col-md-4 col-sm-4">
                          <label class="form-label">1 de Enero/2018</label>
-                    
-                    </div> 
-                      
+
+                    </div>
+
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">Tipo de Emergencia:</label>
                     </div>
@@ -163,29 +132,29 @@
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">Descripcion:</label>
                     </div>
-                      
+
                     <div class="col-md-4 col-sm-4">
               <textarea name="comentarios" rows="5" cols="100">El pasiente se quebro las manos</textarea>
                     </div>
-                  
-                  
+
+
                   </div>
                               <div class="row"><p></p></div>
                   <div class="row">
                     <div class="col-md-12 col-sm-12">
                     </div>
                   </div>
-                
+
                    <div class="row">
-                   
+
                            <div class="col-md-2 col-sm-2">
                       <label class="form-label">Fecha:</label>
                     </div>
                     <div class="col-md-4 col-sm-4">
                          <label class="form-label">1 de Enero/2018</label>
-                    
-                    </div> 
-                      
+
+                    </div>
+
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">Tipo de Emergencia:</label>
                     </div>
@@ -199,30 +168,30 @@
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">Descripcion:</label>
                     </div>
-                      
+
                     <div class="col-md-4 col-sm-4">
               <textarea name="comentarios" rows="5" cols="100">El pasiente se quebro las manos</textarea>
                     </div>
-                  
-                  
+
+
                   </div>
-                               
-                 
+
+
                   <div class="row"><p></p></div>
                   <div class="row">
-                    <div class="col-md-10 col-sm-10"></div>
+                    <div class="col-md-8 col-sm-8"></div>
                     <div class="col-md-2 col-sm-2">
-                      <input type="submit" id="btnRegistrar" class="btn btn-app" value="Regresar"
-                             onclick="window.location='HCE-Main.html';">
-                      <!--<button type="submit" id="btnRegistrar" class="btn btn-app">Registrar</button>!-->
-                      <!--button type="submit" class="btn btn-primary" id="signup_button" data-disable-with="Creating account&hellip;">Create an account</button> !-->
+                    <a href="HCE-Main.php">EDITAR</a>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                    <a href="HCE-Main.php">REGRESAR</a>
                     </div>
                   </div>
-                
+
             </div>
           </div>
         </section>
-                  
+
         <!-- Call to action Start -->
       <!-- Call to action Start -->
     <section id="call-to-action">
@@ -238,7 +207,7 @@
         </div>
       </div>
     </section>
-        
+
     <!-- footer Start -->
     <footer>
       <div class="container">
@@ -246,12 +215,12 @@
           <div class="col-md-12">
             <div class="footer-manu">
               <ul>
-                  <li><a href="HCE-Main.html">Main</a></li>
-                <li><a href="HCE-ConsultaExterna.html">C.Externa</a></li>
-                  <li><a href="HCE-FichaUsuario.html">Ficha usuario</a></li>
-                  <li><a href="HCE-HistoriaResum.html">H. Resumida</a></li>
-                  <li><a href="HCE-Laboratorio.html">Laboratorio</a></li>
-                 <li><a href="HTE-Emergencias.html">Emergencia </a></li>
+                  <li><a href="HCE-Main.php">Main</a></li>
+                <li><a href="HCE-ConsultaExterna.php">C.Externa</a></li>
+                  <li><a href="HCE-FichaUsuario.php">Ficha usuario</a></li>
+                  <li><a href="HCE-HistoriaResum.php">H. Resumida</a></li>
+                  <li><a href="HCE-Laboratorio.php">Laboratorio</a></li>
+                 <li><a href="HTE-Emergencias.php">Emergencia </a></li>
               </ul>
             </div>
           </div>

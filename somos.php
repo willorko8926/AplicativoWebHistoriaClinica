@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+
+?>
 <html lang="es">
   <head>
     <link rel="icon" type="image/png" href="img/logo-nave.ico">   
@@ -17,12 +19,7 @@
     <link rel="stylesheet" href="css/ionicons.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/galeria.css">
-      
-      
-      
-
-
+    
     <!-- Js -->
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -59,18 +56,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                   <img src="img/LOGE.png" alt="Logo">
                 </a>
               </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="somos.html">Quienes Somos</a></li>
-                    <li><a href="servicios.html">Servicio</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                    <li><a href="login.html">Iniciar Sesion</a></li>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="somos.php">Nosotros</a></li>
+                    <li><a href="servicios.php">Servicio</a></li>
+                    <li><a href="contact.php">Contacto</a></li>
+                    <li><a href="login.php">Iniciar Sesión</a></li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
@@ -86,14 +83,30 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="block">
-                  <h1>¿Porque elegir nuestros servicios?</h1>
-                  <p>En MEDIKAL HCE sabemos lo importante que es tener tu historial clínico al alcance de tus manos.</p>
+                  <h1>¿Quiénes somos?</h1>
+                  <p>Somos un grupo de jóvenes que innovamos para mejorar la calidad de vida de las personas</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        
+        <!-- contact form start -->
+        <section id="quienes-form">
+          <div class="container">
+            <div class="col-md-6 col-sm-12">
+              <div class="block">
+                <h2>Acerca de Nosotros</h2>
+                <p>Somos un grupo de jóvenes profesionales de las áreas de Medicina y Tecnologías de Información y Comunicación, comprometidos para desarrollar una Historia Clínica Web de excelente calidad y que esté al alcance de la mayor cantidad de Profesionales de la Salud que permita mejorar la atención sanitaria prestada a los pacientes.</p>
+                <p>Desarrollar y poner al alcance de los profesionales de la Salud un servicio de Sistema de Registros Médicos Electrónicos vía Web, garantizando el resguardo y la confidencialidad de la información combinados con innovación tecnológica necesarios para brindar a los pacientes una atención con la mejor calidad posible.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div>
+               <!-- <img class="quienes-img" src="img/quienes-somos.jpg" alt=""> -->
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- Call to action Start -->
       <!-- Call to action Start -->
     <section id="call-to-action">
@@ -117,19 +130,15 @@
           <div class="col-md-12">
             <div class="footer-manu">
               <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="somos.html">Quienes Somos</a></li>
-                    <li><a href="servicios.html">Servicio</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="somos.php">Nosotros</a></li>
+                <li><a href="servicios.php">Servicio</a></li>
+                <li><a href="contact.php">Contacto</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </footer>   
-       
-        
-        
-        
-      </body>
-    </html>
+    </footer>
+  </body>
+</html>

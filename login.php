@@ -1,4 +1,5 @@
 <?php
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -115,7 +116,11 @@
        <fielset>
       <input type="text" placeholder="Usuario" name="nombreusuario" required="" />
       <input type="password" placeholder="Contraseña" name="contrasenia" required="" />
-      <button>Ingresar</button>
+      <button>Ingresar
+
+
+
+      </button>
       </fielset>
     </form>
 
@@ -123,7 +128,9 @@
   <div class="cta">
     <a href="registrarse.php">REGISTRATE!</a>
   </div>
-
+     <div class="cta">
+    <a href="paginas/registro/registrarse.php">ADMINISTRADOR!</a>
+  </div>
 </div>
     <BR><BR><BR>
 

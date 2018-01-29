@@ -104,6 +104,7 @@
                       <h4 class="underline">Información Personal</h4>
                     </div>
                   </div>
+                  <!--
                   <div class="row">
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">* Tipo Identificación:</label>
@@ -115,28 +116,31 @@
                       </select>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-2 col-sm-2">
+                   -->  
+                    <div class="row">
+                  <div class="col-md-2 col-sm-2">
                       <label class="form-label">* Num. Identificación:</label>
                     </div>
                     <div class="col-md-4 col-sm-4">
                       <input type="text" class="form-control" placeholder="Num. Identificación">
                     </div>
-                  </div>
+                  </div> 
                   <div class="row">
                     <div class="col-md-2 col-sm-2">
-                      <label class="form-label">* Primer Nombre:</label>
+                      <label class="form-label">*Nombres:</label>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                      <input type="text" class="form-control" placeholder="Primer Nombre">
+                      <input type="text" class="form-control" placeholder="Apellidos y Nombre">
                     </div>
+                    
                     <div class="col-md-2 col-sm-2">
-                      <label class="form-label">Segundo Nombre:</label>
+                      <label class="form-label">Apellidos:</label>
                     </div>
                     <div class="col-md-4 col-sm-4">
                       <input type="text" class="form-control" placeholder="Segundo Nombre">
                     </div>
                   </div>
+                   <!--
                   <div class="row">
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">* Apellido Paterno:</label>
@@ -151,6 +155,7 @@
                       <input type="text" class="form-control" placeholder="Apellido Materno">
                     </div>
                   </div>
+                  
                   <div class="row">
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">* Fecha Nacimiento:</label>
@@ -159,6 +164,7 @@
                       <input class="form-control">
                     </div>
                   </div>
+                   -->
                   <div class="row">
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">* Sexo:</label>
@@ -169,6 +175,17 @@
                         <option value="F">Femenino</option>
                       </select>
                     </div>
+
+                   <div class="col-md-2 col-sm-2">
+                      <label class="form-label">* Nacionalidad:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                     
+                      <input type="text" class="form-control" placeholder="Nacionalidad">
+                   
+                    </div>
+
+                    <!--
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">* Estado Civil:</label>
                     </div>
@@ -181,6 +198,7 @@
                         <option value="U">Unión Hecho</option>
                       </select>
                     </div>
+                    -->
                   </div>
                   <div class="row"><p></p></div>
                   <div class="row">

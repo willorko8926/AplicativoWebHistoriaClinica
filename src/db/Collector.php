@@ -7,7 +7,7 @@ define("DB_USER", "postgres");
 define("DB_PASS", "postgres");
 define("DB_NAME", "HCE");
 
-class Collector extends dataBase
+class Collector extends DataBase
 {
   public static $db;
   private $host      = DB_HOST;

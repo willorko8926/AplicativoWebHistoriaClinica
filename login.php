@@ -121,7 +121,7 @@
 
   </div>
   <div class="cta">
-    <a href="registrarse.php">REGISTRATE!</a>
+    <a href="src/admin/registrarse.php">REGISTRATE!</a>
   </div>
 
 </div>

@@ -17,7 +17,7 @@ class Collector extends DataBase
     
   public function __construct()
   {
-    self::$db = new dataBase($this->username, $this->password, $this->host, $this->dbname);
+    self::$db = new DataBase($this->username, $this->password, $this->host, $this->dbname);
   }
 }
 

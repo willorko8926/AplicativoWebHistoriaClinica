@@ -1,6 +1,10 @@
 <?php
-$nombreusuario = $_POST['nombreusuario'];
-
+session_start();
+include_once("../src/lib/pllGeneral.php");
+if (mVerificaSesion() != 1){
+    header('location:../fault.php');
+}
+$pUserName = $_SESSION['SSUserName'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -36,15 +40,9 @@ $nombreusuario = $_POST['nombreusuario'];
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="../js/google-map-init.js"></script>
-
-
     <script src="../js/main.js"></script>
-
-
   </head>
   <body>
-
-
         <!-- Slider Start -->
         <section id="global-header">
           <div class="container">
@@ -56,8 +54,8 @@ $nombreusuario = $_POST['nombreusuario'];
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="block">
-                  <?php echo "<h5 style='text-align: right; margin-right:20px'>Usuario: $nombreusuario </h5>" ;?>
-                  <h5 style="text-align: right; margin-right:20px"><a href="../index.php" >SALIR</h5>
+                  <?php echo "<h5 style='text-align: right; margin-right:20px'>Usuario: ".$pUserName."</h5>";?>
+                  <h5 style="text-align: right; margin-right:20px"><a href="../index.php" >SALIR</a></h5>
                 </div>
               </div>
             </div>

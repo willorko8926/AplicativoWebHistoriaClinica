@@ -1,6 +1,10 @@
 <?php
-$nombreusuario = $_POST['nombreusuario'];
-
+session_start();
+include_once("../src/lib/pllGeneral.php");
+if (mVerificaSesion() != 1){
+    header('location:../fault.php');
+}
+$pUserName = $_SESSION['SSUserName'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -36,24 +40,22 @@ $nombreusuario = $_POST['nombreusuario'];
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="../js/google-map-init.js"></script>
-
-
     <script src="../js/main.js"></script>
-
-
   </head>
   <body>
-
-
         <!-- Slider Start -->
         <section id="global-header">
           <div class="container">
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-6 col-sm-6">
                 <div class="block">
                   <h1>Registro de Emergencias</h1>
-                  <!--<p>Somos un grupo de jóvenes que innovamos para mejorar la calidad de vida de las personas</p> -->
-
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="block">
+                  <?php echo "<h5 style='text-align: right; margin-right:20px'>Usuario: ".$pUserName."</h5>";?>
+                  <h5 style="text-align: right; margin-right:20px"><a href="../index.php" >SALIR</a></h5>
                 </div>
               </div>
             </div>
@@ -66,42 +68,32 @@ $nombreusuario = $_POST['nombreusuario'];
                 <div class="form-group">
                   <div class="row">
                     <div class="col-md-12 col-sm-12">
-
                       <h4 class="underline">Historial de Emergencias</h4>
                     </div>
                   </div>
-
-
-                  </div>
-                  <div class="row">
-
-                           <div class="col-md-2 col-sm-2">
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-2">
                       <label class="form-label">Fecha:</label>
                     </div>
                     <div class="col-md-4 col-sm-4">
                          <label class="form-label">1 de Enero/2018</label>
-
                     </div>
-
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">Tipo de Emergencia:</label>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <label class="form-label">Femur Roto</label>
-
-                      </div>
-                  </div>
+                    </div>
+                </div>
                   <div class="row">
-                        <br>
+                    <br>
                     <div class="col-md-2 col-sm-2">
                       <label class="form-label">Descripcion:</label>
                     </div>
-
                     <div class="col-md-4 col-sm-4">
-              <textarea name="comentarios" rows="5" cols="100">El pasiente se quebro las manos</textarea>
+                        <textarea name="comentarios" rows="5" cols="100">El pasiente se quebro las manos</textarea>
                     </div>
-
-
                   </div>
                   <div class="row"><p></p></div>
                   <div class="row">

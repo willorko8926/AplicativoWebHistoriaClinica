@@ -1,5 +1,10 @@
 <?php
-$nombreusuario = $_POST['nombreusuario'];
+session_start();
+include_once("../src/lib/pllGeneral.php");
+if (mVerificaSesion() != 1){
+    header('location:../fault.php');
+}
+$pUserName = $_SESSION['SSUserName'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -35,15 +40,9 @@ $nombreusuario = $_POST['nombreusuario'];
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="../js/google-map-init.js"></script>
-
-
     <script src="../js/main.js"></script>
-
-
   </head>
   <body>
-
-
         <!-- Slider Start -->
         <section id="global-header">
           <div class="container">
@@ -55,24 +54,23 @@ $nombreusuario = $_POST['nombreusuario'];
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="block">
-                  <?php echo "<h5 style='text-align: right; margin-right:20px'>Usuario: $nombreusuario </h5>" ;?>
-                  <h5 style="text-align: right; margin-right:20px"><a href="../index.php" >SALIR</h5>
+                  <?php echo "<h5 style='text-align: right; margin-right:20px'>Usuario: ".$pUserName."</h5>"; ?>
+                  <h5 style="text-align:right; margin-right:20px"><a href="../index.php" >SALIR</a></h5>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        
         <!-- Examenes Laboratorio Form Start -->
-
-
-              <section id="registrarse-form">
+        <section id="registrarse-form">
           <div class="container">
             <div class="block">
               <form>
                 <div class="form-group">
                   <div class="row">
                     <div class="col-md-12 col-sm-12">
-
                       <h4 class="underline">Información del Usuario</h4>
                     </div>
                   </div>
@@ -84,28 +82,27 @@ $nombreusuario = $_POST['nombreusuario'];
                       <label class="form-label"> Johnny Calderon</label>
                     </div>
 
-                        <div class="col-md-2 col-sm-2">
+                    <div class="col-md-2 col-sm-2">
                       <label class="form-label"> Correo Electronico:</label>
                     </div>
                     <div class="col-md-4 col-sm-4">
                       <label class="form-label"> johnny_calderon94@gmail.com</label>
                     </div>
 
-                        <div class="col-md-2 col-sm-2">
+                    <div class="col-md-2 col-sm-2">
                       <label class="form-label"> ID: </label>
                     </div>
                     <div class="col-md-4 col-sm-4">
                       <label class="form-label"> 0912345678 </label>
                     </div>
 
-                               <div class="col-md-2 col-sm-2">
+                    <div class="col-md-2 col-sm-2">
                       <label class="form-label"> Sexo: </label>
                     </div>
                     <div class="col-md-4 col-sm-4">
                       <label class="form-label"> Masculino</label>
                     </div>
                   </div>
-
 
                   <div class="row"><p></p></div>
                   <div class="row">
@@ -142,9 +139,6 @@ $nombreusuario = $_POST['nombreusuario'];
                     </div>
 
                   </div>
-
-
-
                 </div>
               </form>
             </div>
@@ -153,8 +147,7 @@ $nombreusuario = $_POST['nombreusuario'];
 
 
 
-        <!-- Call to action Start -->
-      <!-- Call to action Start -->
+<!-- Call to action Start -->
     <section id="call-to-action">
       <div class="container">
         <div class="row">
@@ -169,18 +162,18 @@ $nombreusuario = $_POST['nombreusuario'];
       </div>
     </section>
 
-    <!-- footer Start -->
+<!-- footer Start -->
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="footer-manu">
               <ul>
-                     <li><a href="HCE-Main.php">Main</a></li>
-                <li><a href="HCE-ConsultaExterna.php">C.Externa</a></li>
-                  <li><a href="HCE-FichaUsuario.php">Ficha usuario</a></li>
-                  <li><a href="HCE-HistoriaResum.php">H. Resumida</a></li>
-                  <li><a href="HCE-Laboratorio.php">Laboratorio</a></li>
+                 <li><a href="HCE-Main.php">Main</a></li>
+                 <li><a href="HCE-ConsultaExterna.php">C.Externa</a></li>
+                 <li><a href="HCE-FichaUsuario.php">Ficha usuario</a></li>
+                 <li><a href="HCE-HistoriaResum.php">H. Resumida</a></li>
+                 <li><a href="HCE-Laboratorio.php">Laboratorio</a></li>
                  <li><a href="HTE-Emergencias.php">Emergencia </a></li>
               </ul>
             </div>

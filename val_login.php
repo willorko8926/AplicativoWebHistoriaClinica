@@ -1,5 +1,23 @@
 <?php
-  session_start();
+session_start();
+include_once("src/admin/CUsuarioCollector.php");
+include_once("src/admin/CSgUsuario.php");
+
+if (!isset($_POST["txtUserName"]) || !isset($_POST["txtClave"]))
+    header('location:fault.php');
+
+if (isset($_POST["txtUserName"]) && isset($_POST["txtClave"])){
+    $_SESSION["SSUserName"] = $_POST["txtUserName"];
+    $ClaveUsuario = $_POST["txtClave"];
+
+    $lobUsuarioCollector = new CUsuarioCollector();
+    $lobUsuario = $lobUsuarioCollector->selectPK($_SESSION["SSUserName"]);
+    if ($ClaveUsuario == $lobUsuario->getClave()){
+        $_SESSION["SSValida"] = 1;
+        $_SESSION["SSHora"] = time();
+        header('location:admin/HCE-Main.php');
+    }
+    else{
 ?>
 
 <!DOCTYPE html>
@@ -100,31 +118,31 @@
 
 
 <div class="pen-title">
-  <h1>MEDIKAL-HCE</h1><span>Registrate Aquí !! </span>
+  <h1>MEDIKAL-HCE</h1>
 </div>
+    
 <!-- Form Module-->
 <div class="module form-module">
   <div class="toggle">
   </div>
+
   <div class="form">
-    <h2>Ingresar con una cuenta existente</h2>
-     <form id="filldetails"  method="POST" action="val_login.php">
-       <fielset>
-      <input type="text" placeholder="Usuario" name="txtUserName" required="" />
-      <input type="password" placeholder="Contraseña" name="txtClave" required="" />
-      <button>Ingresar</button>
-      </fielset>
-    </form>
-
+    <h2>Verificación de Usuario</h2>
+    <br>
+<?php
+        echo "<h4>Usuario o Contraseña invalido...</h4>";
+        echo "<form id='filldetails'  method='POST' action='login.php'>";
+        echo "  <fielset>";
+        echo "  <button>Volver a Intentar</button>";
+        echo "  </fielset>";
+        echo "</form>";
+    }
+}
+?>
   </div>
-  <div class="cta">
-    <a href="src/admin/registrarse.php">REGISTRATE!</a>
-  </div>
+</div><br><br><br>
 
-</div>
-    <BR><BR><BR>
-
- <!-- footer Start -->
+<!-- footer Start -->
     <footer>
       <div class="container">
         <div class="row">
@@ -151,8 +169,7 @@
 	<script src="assets/js/google-map.js"></script>
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-    <script src="js/indexLog.js"></script>
+  <script src="js/indexLog.js"></script>
 
 </body>
 </html>

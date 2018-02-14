@@ -1,5 +1,7 @@
 <?php
-  session_start();
+session_start();
+$_SESSION = array();
+session_destroy();
 ?>
 
 <!DOCTYPE html>
@@ -97,32 +99,27 @@
       </div>
     </header><!-- header close -->
 <body>
-
-
-<div class="pen-title">
-  <h1>MEDIKAL-HCE</h1><span>Registrate Aquí !! </span>
-</div>
-<!-- Form Module-->
-<div class="module form-module">
-  <div class="toggle">
-  </div>
-  <div class="form">
-    <h2>Ingresar con una cuenta existente</h2>
-     <form id="filldetails"  method="POST" action="val_login.php">
-       <fielset>
-      <input type="text" placeholder="Usuario" name="txtUserName" required="" />
-      <input type="password" placeholder="Contraseña" name="txtClave" required="" />
-      <button>Ingresar</button>
-      </fielset>
-    </form>
-
-  </div>
-  <div class="cta">
-    <a href="src/admin/registrarse.php">REGISTRATE!</a>
-  </div>
-
-</div>
-    <BR><BR><BR>
+    <div class="pen-title">
+      <h1>MEDIKAL-HCE</h1><span>Registrate Aquí !! </span>
+    </div>
+    <!-- Form Module-->
+    <div class="module form-module">
+      <div class="toggle">
+      </div>
+      <div class="form">
+        <h2>Ingresar con una cuenta existente</h2>
+          <form id="filldetails"  method="POST" action="val_login.php">
+            <fielset>
+              <input type="text" placeholder="Usuario" name="txtUserName" required="" />
+              <input type="password" placeholder="Contraseña" name="txtClave" required="" />
+              <button>Ingresar</button>
+            </fielset>
+          </form>
+      </div>
+      <div class="cta">
+        <a href="src/admin/registrarse.php">REGISTRATE!</a>
+      </div>
+    </div><br><br><br>
 
  <!-- footer Start -->
     <footer>
@@ -149,10 +146,7 @@
 	<!-- Google Maps -->
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	<script src="assets/js/google-map.js"></script>
-
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/indexLog.js"></script>
-
 </body>
 </html>

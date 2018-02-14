@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once("src/admin/CUsuarioCollector.php");
-include_once("src/admin/CSgUsuario.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/src/admin/CUsuarioCollector.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/src/admin/CSgUsuario.php");
 
 if (!isset($_POST["txtUserName"]) || !isset($_POST["txtClave"]))
     header('location:fault.php');

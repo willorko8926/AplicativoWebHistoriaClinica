@@ -1,6 +1,6 @@
 <?php
 include_once("CMgRegistroUsuario.php");
-include_once("../db/Collector.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/src/db/Collector.php");
 class CRegUsuarioCollector extends Collector
 {
     function selectALL(){

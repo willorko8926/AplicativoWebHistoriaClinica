@@ -1,6 +1,6 @@
 <?php
-include_once("src/admin/CSgUsuario.php");
-include_once("src/db/Collector.php");
+include_once("CSgUsuario.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/src/db/Collector.php");
 class CUsuarioCollector extends Collector
 {
     private $numReg;

@@ -1,53 +1,57 @@
 <?php
 class CMgPersonaContacto
 {
-    private $codigoPersona;
+    private $codigo_persona;
     private $direccion;
     private $celular;
-    private $correoElectronico;
-    private $codigoPaisResidencia;
+    private $correo_electronico;
+    private $codigo_pais_residencia;
+  
     
-     function __construct($pinCodigoPersona, $pstDireccion, $pstCelular, $pstCorreoElectronico, $pstCodigoPaisRes) {
-       $this->codigoPersona = $pinCodigoPersona;
-       $this->direccion = $pstDireccion;
-       $this->celular = $pstCelular;
-       $this->correoElectronico = $pstCorreoElectronico;
-       $this->codigoPaisResidencia = $pstCodigoPaisRes;
-     }
+     function __construct($codigo_persona, $direccion, $celular, $correo_electronico, $codigo_pais_residencia) {
+       $this->codigo_persona = $codigo_persona;
+       $this->direccion = $direccion;
+       $this->celular = $celular;
+       $this->correo_electronico = $correo_electronico;
+       $this->codigo_pais_residencia = $codigo_pais_residencia;
+      }
      
-     function setCodigoPersona($pinCodigoPersona){
-       $this->codigoPersona = $pinCodigoPersona;
+     function setCodigo_Persona($codigo_persona){
+       $this->codigo_persona = $codigo_persona;
      }
-     function getCodigoPersona(){
-       return $this->codigoPersona;
+     function getCodigo_Persona(){
+       return $this->codigo_persona;
      }
 
-     function setDireccion($pstDireccion){
-       $this->direccion = $pstDireccion;
+     function setDireccion($direccion){
+       $this->direccion = $direccion;
      }
      function getDireccion(){
        return $this->direccion;
      }
 
-     function setCelular($pstCelular){
-       $this->celular = $pstCelular;
+     function setCelular($celular){
+       $this->celular = $celular;
      }
      function getCelular(){
        return $this->celular;
      }
 
-     function setCorreoElectronico($pstCorreoElectronico){
-       $this->correoElectronico = $pstCorreoElectronico;
+     function setCorreo_electronico($correo_electronico){
+       $this->correo_electronico = $correo_electronico;
      }
-     function getCorreoElectronico(){
-       return $this->correoElectronico;
+     function getCorreo_electronico(){
+       return $this->correo_electronico;
      }
 
-     function setCodigoPaisResidencia($pstCodigoPaisRes){
-       $this->codigoPaisResidencia = $pstCodigoPaisRes;
+     function setCodigo_pais_residencia($codigo_pais_residencia){
+       $this->codigo_pais_residencia = $codigo_pais_residencia;
      }
-     function getCodigoPaisResidencia(){
-       return $this->codigoPaisResidencia;
+     function getCodigo_pais_residencia(){
+       return $this->codigo_pais_residencia;
      }
+
+
+     
 }
 ?> 

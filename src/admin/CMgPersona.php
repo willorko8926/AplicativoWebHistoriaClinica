@@ -1,34 +1,35 @@
 <?php
 class CMgPersona
 {
-    private $codigoPersona;
-    private $numeroIdentificacion;
+    private $codigo_persona;
+    private $numero_identificacion;
     private $nombres;
     private $apellidos;
     private $sexo;
     private $nacionalidad;
+  
     
-     function __construct($pinCodigoPersona, $pstNumeroIdent, $pstNombres, $pstApellidos, $pchSexo, $pstNacionalidad) {
-       $this->codigoPersona = $pinCodigoPersona;
-       $this->numeroIdentificacion = $pstNumeroIdent;
+     function __construct($codigo_persona, $numero_identificacion, $pstNombres, $pstApellidos, $pchSexo, $pstNacionalidad) {
+       $this->codigo_persona = $codigo_persona;
+       $this->numero_identificacion = $numero_identificacion;
        $this->nombres = $pstNombres;
        $this->apellidos = $pstApellidos;
        $this->sexo = $pchSexo;
        $this->nacionalidad = $pstNacionalidad;
-     }
+      }
      
-     function setCodigoPersona($pinCodigoPersona){
-       $this->codigoPersona = $pinCodigoPersona;
+     function setCodigo_Persona($codigo_persona){
+       $this->codigo_persona = $codigo_persona;
      }
-     function getCodigoPersona(){
-       return $this->codigoPersona;
+     function getCodigo_Persona(){
+       return $this->codigo_persona;
      }
 
-     function setNumeroIdentificacion($pstNumeroIdent){
-       $this->numeroIdentificacion = $pstNumeroIdent;
+     function setNumero_Identificacion($numero_identificacion){
+       $this->numero_identificacion = $numero_identificacion;
      }
-     function getNumeroIdentificacion(){
-       return $this->numeroIdentificacion;
+     function getNumero_Identificacion(){
+       return $this->numero_identificacion;
      }
 
      function setNombres($pstNombres){
@@ -58,5 +59,7 @@ class CMgPersona
      function getNacionalidad(){
        return $this->nacionalidad;
      }
+
+     
 }
 ?> 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("../src/lib/pllGeneral.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/src/lib/pllGeneral.php");
 if (mVerificaSesion() != 1){
     header('location:../fault.php');
 }
@@ -54,8 +54,8 @@ $pUserName = $_SESSION['SSUserName'];
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="block">
-                  <?php echo "<h5 style='text-align: right; margin-right:20px'>Usuario: ".$pUserName."</h5>";?>
-                  <h5 style="text-align: right; margin-right:20px"><a href="../index.php" >SALIR</a></h5>
+                  <div><?php echo "<h5 style='text-align: right; color:white'>Usuario: ".$pUserName."</h5>"; ?></div>
+                  <div style="text-align: right; padding_right:10px"><a href="../logout.php" style="color:white">Cerrar Sesión</a></div>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ $pUserName = $_SESSION['SSUserName'];
         <section id="registrarse-form">
           <div class="container">
             <div class="block">
-              <form>
+              <form action="HCE-Main.php" method="POST">
                 <div class="form-group">
                   <div class="row">
                     <div class="col-md-12 col-sm-12">
@@ -236,59 +236,29 @@ $pUserName = $_SESSION['SSUserName'];
                       <input type="password" class="form-control" disabled="disabled">
                     </div>
                   </div>
+
                   <div class="row"><p></p></div>
                   <div class="row">
-                    <div class="col-md-8 col-sm-8"></div>
+                    <div class="col-md-10 col-sm-10"></div>
                     <div class="col-md-2 col-sm-2">
-                    <a href="HCE-Main.php">EDITAR</a>
-                    </div>
-                    <div class="col-md-2 col-sm-2">
-                    <a href="HCE-Main.php">REGRESAR</a>
+                      <button class="btn btn-app">Regresar</button>
                     </div>
                   </div>
-                      <!--<button type="submit" id="btnRegistrar" class="btn btn-app">Registrar</button>!-->
-                      <!--button type="submit" class="btn btn-primary" id="signup_button" data-disable-with="Creating account&hellip;">Create an account</button> !-->
-                    </div>
-                  </div>
+                </div>
               </form>
             </div>
           </div>
         </section>
 
-        <!-- Call to action Start -->
-      <!-- Call to action Start -->
-    <section id="call-to-action">
+<!-- Call to action Start -->
+    <section id="global-header">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <div class="block">
-              <h2>Experiencia de Usuario.</h2>
-              <p>Ver las experiencia de nuestro usuarios nos da ese empujon a seguir actualizando nuestros contenidos, no es solo una pagina es un sitio pensado en tí.</p>
-              <a class="btn btn-default btn-call-to-action" href="#" >Ver Historias</a>
-            </div>
-          </div>
+            <div class="col-md-4 col-sm-4"></div>
+            <div class="col-md-4 col-sm-4"><p style="color:white">Derechos Reservados MedikalHCE©</p></div>
+            <div class="col-md-4 col-sm-4"></div>
         </div>
       </div>
     </section>
-
-    <!-- footer Start -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-manu">
-              <ul>
-                       <li><a href="HCE-Main.php">Main</a></li>
-                <li><a href="HCE-ConsultaExterna.php">C.Externa</a></li>
-                  <li><a href="HCE-FichaUsuario.php">Ficha usuario</a></li>
-                  <li><a href="HCE-HistoriaResum.php">H. Resumida</a></li>
-                  <li><a href="HCE-Laboratorio.php">Laboratorio</a></li>
-                 <li><a href="HTE-Emergencias.php">Emergencia </a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

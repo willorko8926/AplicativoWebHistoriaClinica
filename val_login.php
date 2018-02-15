@@ -12,7 +12,7 @@ if (isset($_POST["txtUserName"]) && isset($_POST["txtClave"])){
 
     $lobUsuarioCollector = new CUsuarioCollector();
     $lobUsuario = $lobUsuarioCollector->selectPK($_SESSION["SSUserName"]);
-    if ($ClaveUsuario == $lobUsuario->getClave()){
+    if ($lobUsuario->getEstado() == "A" && $ClaveUsuario == $lobUsuario->getClave()){
         $_SESSION["SSValida"] = 1;
         $_SESSION["SSHora"] = time();
         header('location:admin/HCE-Main.php');

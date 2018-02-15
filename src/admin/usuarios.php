@@ -71,7 +71,7 @@ $pUserName = $_SESSION['SSUserName'];
         <div class="block">
           <div class="row">
             <div class="col-md-12 col-sm-12">
-              <h4 class="underline">Registro de Usuario</h4>
+              <h4 class="underline">Usuarios del Sistema</h4>
             </div>
           </div>
 
@@ -81,25 +81,25 @@ $pUserName = $_SESSION['SSUserName'];
           <form action="../../admin.php" method="POST">
               <table id="examen-list">
                 <tr>
-                  <th class="col-center">Num.Reg.</th>
-                  <th class="col-left">Identificación</th>
-                  <th class="col-left">Nombres</th>
-                  <th class="col-left">Apellidos</th>
-                  <th class="col-center"><a href="registrarseCreate.php" style="color:white">Crear</a></th>
+                  <th class="col-left">Código Usuario</th>
+                  <th class="col-left">Clave</th>
+                  <th class="col-left">Id. Persona</th>
+                  <th class="col-left">Estado (A/I)</th>
+                  <th class="col-center"><a href="usuariosCreate.php" style="color:white">Crear</a></th>
                 </tr>
 <!--************************************************************************************-->
 <!--Detalle de la Tabla-->
             <?php
-              include_once("CRegUsuarioCollector.php");
+              include_once("CUsuarioCollector.php");
               $id = 1;
-              $lobRegUsuarioCollector = new CRegUsuarioCollector();
-              foreach ($lobRegUsuarioCollector->selectALL() as $r){
+              $lobUsuarioCollector = new CUsuarioCollector();
+              foreach ($lobUsuarioCollector->selectALL() as $r){
                 echo "<tr>";
-                echo "    <td class='col-center'>".$r->getNumeroRegistro()."</td>";
-                echo "    <td class='col-left'>".$r->getNumeroIdentificacion()."</td>";
-                echo "    <td class='col-left'>".$r->getNombres()."</td>";
-                echo "    <td class='col-left'>".$r->getApellidos()."</td>";
-                echo "    <td class='col-center'><a href='registrarseEdit.php?id=".$r->getNumeroRegistro()."'>Editar</a>   <a href='registrarseDML.php?id=".$r->getNumeroRegistro()."&tipoOperacion=3'>Eliminar</a></td>";
+                echo "    <td class='col-left'>".$r->getCodigoUsuario()."</td>";
+                echo "    <td class='col-left'>".$r->getClave()."</td>";
+                echo "    <td class='col-left'>".$r->getCodigoPersona()."</td>";
+                echo "    <td class='col-left'>".$r->getEstado()."</td>";
+                echo "    <td class='col-center'><a href='usuariosEdit.php?id=".$r->getCodigoUsuario()."'>Editar</a> <a href='usuariosDML.php?id=".$r->getCodigoUsuario()."&tipoOperacion=3'>Eliminar</a></td>";
                 echo "</tr>";
               }
             ?>

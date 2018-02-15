@@ -71,52 +71,55 @@ $pUserName = $_SESSION['SSUserName'];
         <div class="block">
           <div class="row">
             <div class="col-md-12 col-sm-12">
-              <h4 class="underline">Registro de Usuario</h4>
+              <h4 class="underline">Crear Nuevo Usuario</h4>
             </div>
           </div>
 
 <!--************************************************************************************-->
 <!--Consulta de Datos de la Tabla-->
 <!--Cabecera de la Tabla-->
-          <form action="../../admin.php" method="POST">
-              <table id="examen-list">
-                <tr>
-                  <th class="col-center">Num.Reg.</th>
-                  <th class="col-left">Identificación</th>
-                  <th class="col-left">Nombres</th>
-                  <th class="col-left">Apellidos</th>
-                  <th class="col-center"><a href="registrarseCreate.php" style="color:white">Crear</a></th>
-                </tr>
-<!--************************************************************************************-->
-<!--Detalle de la Tabla-->
-            <?php
-              include_once("CRegUsuarioCollector.php");
-              $id = 1;
-              $lobRegUsuarioCollector = new CRegUsuarioCollector();
-              foreach ($lobRegUsuarioCollector->selectALL() as $r){
-                echo "<tr>";
-                echo "    <td class='col-center'>".$r->getNumeroRegistro()."</td>";
-                echo "    <td class='col-left'>".$r->getNumeroIdentificacion()."</td>";
-                echo "    <td class='col-left'>".$r->getNombres()."</td>";
-                echo "    <td class='col-left'>".$r->getApellidos()."</td>";
-                echo "    <td class='col-center'><a href='registrarseEdit.php?id=".$r->getNumeroRegistro()."'>Editar</a>   <a href='registrarseDML.php?id=".$r->getNumeroRegistro()."&tipoOperacion=3'>Eliminar</a></td>";
-                echo "</tr>";
-              }
-            ?>
-              </table>
-<!--************************************************************************************-->
-
-              <br><br><br>
-              <div class="row"><p></p></div>
-              <div class="row">
-                <div class="col-md-9 col-sm-9"></div>
-                <div class="col-md-2 col-sm-2">
-                  <button class="btn btn-app">Menú Administración</button>
-                </div>
+          <form action="usuariosDML.php?tipoOperacion=1" method="post">
+            <div class="row">
+              <div class="col-md-2 col-sm-2">
+                <label>Código Usuario: </label>
               </div>
+              <div class="col-md-4 col-sm-4">
+                <input type="text" name="txtCodigoUsuario" autofocus required><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 col-sm-2">
+                <label>Clave: </label>
+              </div>
+              <div class="col-md-4 col-sm-4">
+                <input type="text" name="txtClaveUsuario" required><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 col-sm-2">
+                <label>Id Persona: </label>
+              </div>
+              <div class="col-md-4 col-sm-4">
+                <input type="text" name="txtCodigoPersona" required><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 col-sm-2">
+                <label>Estado (A/I): </label>
+              </div>
+              <div class="col-md-4 col-sm-4">
+                <input type="text" name="txtEstadoUsuario" required><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5 col-sm-5">
+                <button type="submit" class="btn btn-app">Guardar</button> <a href="usuarios.php">Cancelar</a><br>
+              </div>
+            </div>
           </form>
+<!--************************************************************************************-->
         </div>
-      </div><br><br><br><br><br>
+      </div><br><br>
     </section>
 
 <!-- Call to action Start -->

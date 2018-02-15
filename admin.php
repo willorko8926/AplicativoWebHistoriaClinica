@@ -80,16 +80,16 @@ $pUserName = $_SESSION['SSUserName'];
               </div>
               <div class="row">
                 <div class="col-md-6 col-sm-6">
-                  <div><a href="">Países</a></div>
-                  <div><a href="">Contactos</a></div>
+                  <div><a href="src/admin/pais.php">Países</a></div>
+                  <div><a href="src/admin/contacto.php">Contactos</a></div>
                   <div><a href="src/admin/registrarse.php">Registro de Usuarios</a></div>
                   <div><a href="src/admin/persona.php">Personas</a></div>
                   <div><a href="src/admin/personaContacto.php">Personas / Contactos</a></div>
                 </div>
                 <div class="col-md-6 col-sm-6">
-                  <div><a href="">Roles</a></div>
-                  <div><a href="">Usuarios</a></div>
-                  <div><a href="">Roles x Usuario</a></div>
+                  <div><a href="src/admin/rol.php">Roles</a></div>
+                  <div><a href="src/admin/usuarios.php">Usuarios</a></div>
+                  <div><a href="src/admin/rolxusuario.php">Roles x Usuario</a></div>
                 </div>
               </div>
               <br>
@@ -102,8 +102,8 @@ $pUserName = $_SESSION['SSUserName'];
                 <div class="col-md-6 col-sm-6">
                   <div><a href="">Instituciones</a></div>
                   <div><a href="">Médicos</a></div>
-                  <div><a href="">Resumen Clínico</a></div>
-                  <div><a href="">Atención de Consultas</a></div>
+                  <div><a href="src/admin/resumenClinico.php">Resumen Clínico</a></div>
+                  <div><a href="src/admin/atencionConsultas.php">Atención de Consultas</a></div>
                   <div><a href="">Atención Emergencias</a></div>
                   <div><a href="src/admin/examen.php">Exámenes de Laboratorio</a></div>
                 </div>

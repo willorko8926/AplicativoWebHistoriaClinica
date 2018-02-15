@@ -1,0 +1,37 @@
+<?php
+  session_start();
+?>
+<html lang="es">
+<head>
+</head>
+<body>
+    <header>
+    </header> 
+    <h2>Modificación de Registros de Medicos</h2>
+    
+    <?php
+        include_once("CRegMedicosCollector.php");
+        include_once("medicosRegistrarse.php");
+        
+        $id = $_GET["id"];
+        $lobRegMedicosCollector = new CRegMedicosCollector();
+        $lobRegMedicos = $lobRegMedicosCollector->selectPK($id);
+    ?>
+    
+    <form action="medicosRegistrarseDML.php?tipoOperacion=2" method="post">
+    <fieldset>
+        <label>Cod. Persona: </label>
+        <input type="text" name="txtCodPersona" value="<?php echo $lobRegMedicos->getCodigoPersona(); ?>" readonly><br><br>
+        <label>Especialidad: </label>
+        <input type="text" name="txtEspecialidad" value="<?php echo $lobRegMedicos->getEspecialidad(); ?>"><br><br>
+        <label>Estado: </label>
+        <input type="text" name="txtEstado" value="<?php echo $lobRegMedicos->getEstado(); ?>"><br>
+     
+    </fieldset>
+    <fieldset>
+        <button type="submit" style="padding:5px">Actualizar</button> <a href="medicosRegistrarse.php">Cancelar</a>
+        <br>
+    </fieldset>
+    </form>
+</body>
+</html>

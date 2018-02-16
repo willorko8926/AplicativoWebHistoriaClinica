@@ -1,4 +1,13 @@
 <?php
+session_start();
+include_once($_SERVER['DOCUMENT_ROOT'] . "/src/lib/pllGeneral.php");
+
+if (mVerificaSesion() != 1){
+    header('location:fault.php');
+}
+$pUserName = $_SESSION['SSUserName'];
+?>
+<?php
 include_once("CMgRegistroUsuario.php");
 include_once($_SERVER['DOCUMENT_ROOT'] . "/src/db/Collector.php");
 class CRegUsuarioCollector extends Collector

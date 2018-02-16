@@ -1,6 +1,11 @@
 <?php
-    session_start();
-    //if (isset($_SESSION['nombre']))
+session_start();
+include_once($_SERVER['DOCUMENT_ROOT'] . "/src/lib/pllGeneral.php");
+
+if (mVerificaSesion() != 1){
+    header('location:fault.php');
+}
+$pUserName = $_SESSION['SSUserName'];
 ?>
 <html lang="es">
 <head>

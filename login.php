@@ -117,7 +117,7 @@ session_destroy();
           </form>
       </div>
       <div class="cta">
-        <a href="src/admin/registrarse.php">REGISTRATE!</a>
+        <a href="registrarse.php">REGISTRATE!</a>
       </div>
     </div><br><br><br>
 

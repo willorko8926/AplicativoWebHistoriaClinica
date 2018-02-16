@@ -29,12 +29,12 @@ class CAtencionConsultasCollector extends Collector
         //}
     }
     
-    function insertREC($codigoPersona, $codigoInstitucion, $codigoMedico, $fechaAtencion, $especialidad, $diagnostico){
+    function insertREC($numeroAtencion, $codigoPersona, $codigoInstitucion, $codigoMedico, $fechaAtencion, $especialidad, $diagnostico){
         //if (empty($codigoPaisResidencia)) {
         //    $insertarow = self::$db->insertRow("INSERT INTO public.hc_atencion_consultas (codigo_persona, codigo_institucion, codigo_medico, fecha_atencion, especialidad, diagnostico) VALUES (?,?,?,?,?)", array ("{$codigoPersona}","{$codigoInstitucion}","{$codigoMedico}","{$fechaAtencion}","{$especialidad}","{$diagnostico}"));
         //}
         //else{
-            $insertarow = self::$db->insertRow("INSERT INTO public.hc_atencion_consultas (codigo_persona, codigo_institucion, codigo_medico, fecha_atencion, especialidad, diagnostico) VALUES (?,?,?,?,?,?)", array ("{$codigoPersona}","{$codigoInstitucion}","{$codigoMedico}","{$fechaAtencion}","{$especialidad}","{$diagnostico}"));
+            $insertarow = self::$db->insertRow("INSERT INTO public.hc_atencion_consultas (numero_atencion, codigo_persona, codigo_institucion, codigo_medico, fecha_atencion, especialidad, diagnostico) VALUES (?,?,?,?,?,?,?)", array ("{$numeroAtencion}","{$codigoPersona}","{$codigoInstitucion}","{$codigoMedico}","{$fechaAtencion}","{$especialidad}","{$diagnostico}"));
         //}
     }    
 

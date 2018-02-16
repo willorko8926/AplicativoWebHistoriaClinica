@@ -19,6 +19,7 @@ $pUserName = $_SESSION['SSUserName'];
     if (isset($_GET['tipoOperacion'])){
         $tipoOperacion = $_GET["tipoOperacion"];
         if ($tipoOperacion == 1){
+            $numeroAtencion = $_POST["txtNumAtencion"];
             $codigoPersona = $_POST["txtCodUsuario"];
             $codigoInstitucion = $_POST["txtCodUMedica"];
             $codigoMedico = $_POST["txtCodMedico"];
@@ -28,7 +29,7 @@ $pUserName = $_SESSION['SSUserName'];
          
             
             $lobAtencionConsultasCollector = new CAtencionConsultasCollector();
-            $lobAtencionConsultasCollector->insertREC($codigoPersona, $codigoInstitucion, $codigoMedico, $fechaAtencion, $especialidad, $diagnostico);
+            $lobAtencionConsultasCollector->insertREC($numeroAtencion, $codigoPersona, $codigoInstitucion, $codigoMedico, $fechaAtencion, $especialidad, $diagnostico);
             echo "Registro de Consulta Creado Exitosamente...";
         }
         if ($tipoOperacion == 2){

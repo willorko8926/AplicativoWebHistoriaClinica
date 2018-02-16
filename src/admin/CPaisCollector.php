@@ -26,9 +26,9 @@ class CPaisCollector extends Collector
             $updaterow = self::$db->updateRow("UPDATE public.mg_paises  SET nombre_pais = ? WHERE codigo_pais = ?", array("{$nombrePais}",$codigoPais));
     }
     
-    function insertREC($nombrePais){
+    function insertREC($codigoPais, $nombrePais){
     
-            $insertarow = self::$db->insertRow("INSERT INTO public.mg_paises (nombre_pais) VALUES (?)", array ("{$nombrePais}"));
+            $insertarow = self::$db->insertRow("INSERT INTO public.mg_paises (codigo_pais, nombre_pais) VALUES (?,?)", array ("{$codigoPais}","{$nombrePais}"));
     }    
 
     function deleteREC($id){

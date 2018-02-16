@@ -100,11 +100,11 @@ $pUserName = $_SESSION['SSUserName'];
               </div>
               <div class="row">
                 <div class="col-md-6 col-sm-6">
-                  <div><a href="">Instituciones</a></div>
-                  <div><a href="">Médicos</a></div>
+                  <div><a href="src/admin/institucionRegistrarse.php">Instituciones</a></div>
+                  <div><a href="src/admin/medicosRegistrarse.php">Médicos</a></div>
                   <div><a href="src/admin/resumenClinico.php">Resumen Clínico</a></div>
                   <div><a href="src/admin/atencionConsultas.php">Atención de Consultas</a></div>
-                  <div><a href="">Atención Emergencias</a></div>
+                  <div><a href="src/admin/atencionEmergenciasRegistrarse.php">Atención Emergencias</a></div>
                   <div><a href="src/admin/examen.php">Exámenes de Laboratorio</a></div>
                 </div>
               </div>

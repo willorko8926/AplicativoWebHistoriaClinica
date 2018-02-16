@@ -22,23 +22,24 @@ $pUserName = $_SESSION['SSUserName'];
     if (isset($_GET['tipoOperacion'])){
         $tipoOperacion = $_GET["tipoOperacion"];
         if ($tipoOperacion == 1){
-            $codigo_persona = $_POST["codigo_persona"];
-            $codigo_institucion = $_POST["codigo_institucion"];
-            $codigo_medico = $_POST["codigo_medico"];
-            $fecha_examen = $_POST["fecha_examen"];
-            $tipo_examen = $_POST["tipo_examen"];
-            $consideraciones_examen = $_POST["consideraciones_examen"];
-            $explicacion_resultado = $_POST["explicacion_resultado"];
+            $numero= $_POST["txtNumExamen"];
+            $codigo_persona = $_POST["txtcodigo_persona"];
+            $codigo_institucion = $_POST["txtcodigo_institucion"];
+            $codigo_medico = $_POST["txtcodigo_medico"];
+            $fecha_examen = $_POST["txtfecha_examen"];
+            $tipo_examen = $_POST["txttipo_examen"];
+            $consideraciones_examen = $_POST["txtconsideraciones_examen"];
+            $explicacion_resultado = $_POST["txtexplicacion_examen"];
 
                     
             $lobExamenCollector = new CExamenCollector();
-            $lobExamenCollector->insertREC($codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado);
+            $lobExamenCollector->insertREC($numero,$codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado);
             echo "Registro Creado Exitosamente...";
         }
 
         if ($tipoOperacion == 2){
          
-            $codigo_persona = $_POST["codigo_persona"];
+            $codigo_persona = $_POST["codigo_persona"];           
             $codigo_institucion = $_POST["codigo_institucion"];
             $codigo_medico = $_POST["codigo_medico"];
             $fecha_examen = $_POST["fecha_examen"];

@@ -14,39 +14,39 @@ $pUserName = $_SESSION['SSUserName'];
     <header>
     </header>
 <?php
-
-        
     include_once("CPersonaContactoCollector.php");
     
     if (isset($_GET['tipoOperacion'])){
         $tipoOperacion = $_GET["tipoOperacion"];
         if ($tipoOperacion == 1){
-            $txtDireccion = $_POST["txtDireccion"];
-            $txtCelular = $_POST["txtCelular"];
-            $txtCorreo = $_POST["txtCorreo"];
-            $txtCodigoPais = $_POST["txtCodigoPais"];
-                    
+
+            $direccion = $_POST["txtDireccion"];
+            $celular = $_POST["txtCelular"];
+            $correo_electronico = $_POST["txtCorreo"];
+            $codigo_pais_residencia = $_POST["txtCodigoPais"];                
             $lobPersonaContactoCollector = new CPersonaContactoCollector();
-            $lobPersonaContactoCollector->insertREC($txtDireccion, $txtCelular, $txtCorreo, $txtCodigoPais);
+    $lobPersonaContactoCollector->insertREC($direccion, $celular, $correo_electronico,$codigo_pais_residencia);
             echo "Registro Creado Exitosamente...";
         }
         if ($tipoOperacion == 2){
-         
-            $txtDireccion = $_POST["txtDireccion"];
-            $txtCelular = $_POST["txtCelular"];
-            $txtCorreo = $_POST["txtCorreo"];
-            $txtCodigoPais = $_POST["txtCodigoPais"];
+
+            $codigo_persona = $_POST["txtCodigoPersona"];
+            $numero_identificacion = $_POST["txtIdentificacion"];
+            $nombres = $_POST["txtNombres"];
+            $apellidos = $_POST["txtApellidos"];
+            $sexo = $_POST["txtSexo"];
+            $nacionalidad = $_POST["txtNacionalidad"];
             
             $lobPersonaContactoCollector = new CPersonaContactoCollector();
-            $lobPersonaContactoCollector->updateALL($txtDireccion, $txtCelular, $, $txtCorreo, $txtCodigoPais);
+            $lobPersonaContactoCollector->updateALL($codigo_persona,$numero_identificacion, $nombres, $apellidos, $sexo, $nacionalidad);
             echo "Registro Actualizado Exitosamente...";
         }
         if ($tipoOperacion == 3){
             if (isset($_GET['id'])){
                 $id = $_GET["id"];
                 
-                $lobPersonaContactoCollector = new CPersonaContactoCollector();
-                $lobPersonaContactoCollector->deleteREC($id);
+                $lobPersonaCollector = new CPersonacontactoCollector();
+                $lobPersonaCollector->deleteREC($id);
                 echo "Registro Eliminado Exitosamente...";
             }
             else

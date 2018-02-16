@@ -9,7 +9,7 @@ $pUserName = $_SESSION['SSUserName'];
 ?>
 <html lang="es">
 <head>
- <link rel="icon" type="image/png" href="../img/logo-nave.ico">
+     <link rel="icon" type="image/png" href="../img/logo-nave.ico">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Medikal-HCE</title>
@@ -43,9 +43,7 @@ $pUserName = $_SESSION['SSUserName'];
     <script src="../js/main.js"></script>
 </head>
 <body>
-    
-    
-    <!-- Slider Start -->
+ <!-- Slider Start -->
     <section id="global-header">
       <div class="container">
         <div class="row">
@@ -65,61 +63,36 @@ $pUserName = $_SESSION['SSUserName'];
         </div>
       </div>
     </section>
-      <!-- Administracion Start -->
+
+    <!-- Administracion Start -->
     <section id="examen-form">
       <div class="container">
         <div class="block">
           <div class="row">
             <div class="col-md-12 col-sm-12">
-              <h4 class="underline">Registro de Usuario</h4>
+              <h4 class="underline">Crear Nuevo Médico</h4>
             </div>
           </div>
-    
+
 <!--************************************************************************************-->
 <!--Consulta de Datos de la Tabla-->
 <!--Cabecera de la Tabla-->
-          <form action="../../admin.php" method="POST">
-              <table id="examen-list">
-                <tr>
-                  <th class="col-center">Cod.Persona</th>
-                  <th class="col-left">Especialidad</th>
-                  <th class="col-left">Estado</th>
-                  <th class="col-center"><a href="medicosRegistrarseCreate.php" style="color:white">Crear</a></th>
-                </tr>
     
- 
- 
-        <!--************************************************************************************-->
-<!--Detalle de la Tabla-->
-<?php
-    include_once("CRegMedicosCollector.php");
-    $id = 1;
-    $lobRegMedicosCollector = new CRegMedicosCollector();
-    foreach ($lobRegMedicosCollector->selectALL() as $r){
-        echo "<tr>";
-        echo "    <td class='col_center'>".$r->getCodigoPersona()."</td>";
-        echo "    <td class='col_left'>".$r->getEspecialidad()."</td>";
-        echo "    <td class='col_left'>".$r->getEstado()."</td>";
-        echo "    <td class='col-center'><a href='medicosRegistrarseEdit.php?id=".$r->getCodigoPersona()."'>Editar</a> <a href='medicosRegistrarseDML.php?id=".$r->getCodigoPersona()."&tipoOperacion=3'>Eliminar</a></td>";
-        echo "</tr>";
-    }
-?>
-                  
-<!--************************************************************************************-->
+    <form action="medicosDML.php?tipoOperacion=1" method="post">
+    <fieldset>
+        <label>Cod.Persona: </label><input type="text" name="txtCodPersona" autofocus><br><br>
+        <label>Especialidad: </label><input type="text" name="txtEspecialidad"><br><br>
+        <label>Estado: </label><input type="text" name="txtEstado"><br><br>
 
- 
-    </table>
-  <br><br><br>
-              <div class="row"><p></p></div>
-              <div class="row">
-                <div class="col-md-9 col-sm-9"></div>
-                <div class="col-md-2 col-sm-2">
-                  <button class="btn btn-app">Menú Administración</button>
-                </div>
-              </div>
-          </form>
+    </fieldset>
+    <fieldset>
+        <button type="submit" style="padding:5px">Guardar</button> <a href="medicos.php">Cancelar</a>
+        <br>
+    </fieldset>
+    </form>
+<!--************************************************************************************-->
         </div>
-      </div><br><br><br><br><br>
+      </div><br><br>
     </section>
 
 <!-- Call to action Start -->

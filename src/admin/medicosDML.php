@@ -51,6 +51,6 @@ $pUserName = $_SESSION['SSUserName'];
     else
         echo "Tipo de Operación No Definida... Registro de Información No Exitoso!!!";
 ?>    
-    <div><a href="medicosRegistrarse.php">Volver Administración de Registros</a></div>
+    <div><a href="medicos.php">Volver Administración de Registros</a></div>
 </body>
 </html>

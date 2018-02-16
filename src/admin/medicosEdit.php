@@ -71,7 +71,7 @@ $pUserName = $_SESSION['SSUserName'];
         <div class="block">
           <div class="row">
             <div class="col-md-12 col-sm-12">
-              <h4 class="underline">Modificar Usuario del Sistema</h4>
+              <h4 class="underline">Modificar Médicos</h4>
             </div>
           </div>
 
@@ -80,14 +80,14 @@ $pUserName = $_SESSION['SSUserName'];
 <!--Cabecera de la Tabla-->
     <?php
         include_once("CRegMedicosCollector.php");
-        include_once("medicosRegistrarse.php");
+        include_once("CHcMedicos.php");
         
         $id = $_GET["id"];
         $lobRegMedicosCollector = new CRegMedicosCollector();
         $lobRegMedicos = $lobRegMedicosCollector->selectPK($id);
     ?>
     
-    <form action="medicosRegistrarseDML.php?tipoOperacion=2" method="post">
+    <form action="medicosDML.php?tipoOperacion=2" method="post">
     <fieldset>
         <label>Cod. Persona: </label>
         <input type="text" name="txtCodPersona" value="<?php echo $lobRegMedicos->getCodigoPersona(); ?>" readonly><br><br>
@@ -98,7 +98,7 @@ $pUserName = $_SESSION['SSUserName'];
      
     </fieldset>
     <fieldset>
-        <button type="submit" style="padding:5px">Actualizar</button> <a href="medicosRegistrarse.php">Cancelar</a>
+        <button type="submit" style="padding:5px">Actualizar</button> <a href="medicos.php">Cancelar</a>
         <br>
     </fieldset>
     </form>

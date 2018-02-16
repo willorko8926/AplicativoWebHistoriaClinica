@@ -30,7 +30,8 @@ $pUserName = $_SESSION['SSUserName'];
             echo "Registro Creado Exitosamente...";
         }
         if ($tipoOperacion == 2){
-         
+
+            $codigo_persona = $_POST["txtCodigoPersona"];
             $numero_identificacion = $_POST["txtIdentificacion"];
             $nombres = $_POST["txtNombres"];
             $apellidos = $_POST["txtApellidos"];
@@ -38,7 +39,7 @@ $pUserName = $_SESSION['SSUserName'];
             $nacionalidad = $_POST["txtNacionalidad"];
             
             $lobPersonaCollector = new CPersonaCollector();
-            $lobPersonaCollector->updateALL($numero_identificacion, $nombres, $apellidos, $sexo, $nacionalidad);
+            $lobPersonaCollector->updateALL($codigo_persona,$numero_identificacion, $nombres, $apellidos, $sexo, $nacionalidad);
             echo "Registro Actualizado Exitosamente...";
         }
         if ($tipoOperacion == 3){

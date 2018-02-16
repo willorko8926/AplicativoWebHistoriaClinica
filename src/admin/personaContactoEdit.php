@@ -20,7 +20,7 @@ $pUserName = $_SESSION['SSUserName'];
         include_once("CMgPersonaContacto.php");
         
         $id = $_GET["id"];
-        $lobPersonaContactoCollector = new CPersonaCollector();
+        $lobPersonaContactoCollector = new CPersonaContactoCollector();
         $lobPersonaContacto = $lobPersonaContactoCollector->selectPK($id);
     ?>
     

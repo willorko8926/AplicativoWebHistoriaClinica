@@ -30,12 +30,8 @@ class CPersonaCollector extends Collector
         return $lobPersona;
     }
     
-    function updateALL($numero_identificacion, $nombres, $apellidos, $sexo, $nacionalidad){
-        if (empty($codigo_persona)) {
-            $updaterow = self::$db->updateRow("UPDATE public.mg_personas SET numero_identificacion = ?, nombres = ?, apellidos = ?, sexo = ?, nacionalidad = ? WHERE codigo_persona = ?", array("{$numero_identificacion}","{$nombres}","{$apellidos}","{$sexo}","{$nacionalidad}",$codigo_persona));
-        }else{
-            $updaterow = self::$db->updateRow("UPDATE public.mg_personas SET numero_identificacion = ?, nombres = ?, apellidos = ?, sexo = ?, nacionalidad = ?", array("{$numero_identificacion}","{$nombres}","{$apellidos}","{$sexo}","{$nacionalidad}",$codigo_persona));
-        }
+    function updateALL($codigo_persona,$numero_identificacion, $nombres, $apellidos, $sexo, $nacionalidad){
+            $updaterow = self::$db->updateRow("UPDATE public.mg_personas SET numero_identificacion = ?, nombres = ?, apellidos = ?, sexo = ?, nacionalidad = ? WHERE codigo_persona = ?", array("{$numero_identificacion}","{$nombres}","{$apellidos}","{$sexo}","{$nacionalidad}",$codigo_persona));     
     }
     
     function insertREC($numero_identificacion, $nombres, $apellidos, $sexo, $nacionalidad){

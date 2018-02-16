@@ -44,12 +44,12 @@ class CExamenCollector extends Collector
     }
     
 
-    function insertREC($codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado){
+    function insertREC($numero,$codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado){
         if (empty($numero_examen)) {
-            $insertarow = self::$db->insertRow("INSERT INTO public.hc_examenes_laboratorio (codigo_persona, codigo_institucion, codigo_medico, fecha_examen, tipo_examen, consideraciones_examen, explicacion_resultado) VALUES (?,?,?,?,?,?,?)", array ("{$codigo_persona}","{$codigo_institucion}","{$codigo_medico}","{$fecha_examen}","{$tipo_examen}","{$consideraciones_examen}","{$explicacion_resultado}"));
+            $insertarow = self::$db->insertRow("INSERT INTO public.hc_examenes_laboratorio (numero,codigo_persona, codigo_institucion, codigo_medico, fecha_examen, tipo_examen, consideraciones_examen, explicacion_resultado) VALUES (?,?,?,?,?,?,?,?)", array ("{$numero}","{$codigo_persona}","{$codigo_institucion}","{$codigo_medico}","{$fecha_examen}","{$tipo_examen}","{$consideraciones_examen}","{$explicacion_resultado}"));
         }
         else{
-            $insertarow = self::$db->insertRow("INSERT INTO public.hc_examenes_laboratorio (codigo_persona, codigo_institucion, codigo_medico, fecha_examen, tipo_examen, consideraciones_examen, explicacion_resultado) VALUES (?,?,?,?,?,?,?)", array ("{$codigo_persona}","{$codigo_institucion}","{$codigo_medico}","{$fecha_examen}","{$tipo_examen}","{$consideraciones_examen}","{$explicacion_resultado}"));
+            $insertarow = self::$db->insertRow("INSERT INTO public.hc_examenes_laboratorio (numero,codigo_persona, codigo_institucion, codigo_medico, fecha_examen, tipo_examen, consideraciones_examen, explicacion_resultado) VALUES (?,?,?,?,?,?,?,?)", array ("{$numero}","{$codigo_persona}","{$codigo_institucion}","{$codigo_medico}","{$fecha_examen}","{$tipo_examen}","{$consideraciones_examen}","{$explicacion_resultado}"));
         }
     }    
 

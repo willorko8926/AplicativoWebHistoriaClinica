@@ -1,5 +1,4 @@
 <?php
-
 class CMgPersonaContacto
 {
     private $codigo_persona;

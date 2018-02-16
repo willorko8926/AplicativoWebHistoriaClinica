@@ -1,24 +1,8 @@
 <?php
-session_start();
-include_once($_SERVER['DOCUMENT_ROOT'] . "/src/lib/pllGeneral.php");
-
-if (mVerificaSesion() != 1){
-    header('location:fault.php');
-}
-$pUserName = $_SESSION['SSUserName'];
-?>
-<?php
 include_once("CSgUsuario.php");
 include_once($_SERVER['DOCUMENT_ROOT'] . "/src/db/Collector.php");
 class CUsuarioCollector extends Collector
 {
-    private $numReg;
-    
-    function getNumReg(){
-       return $this->numReg;
-     }
-
-    
     function selectALL(){
         $rows = self::$db->getRows("select * from public.SG_USUARIOS");
         $arrayData = array();
@@ -31,7 +15,6 @@ class CUsuarioCollector extends Collector
     
     function selectPK($codigoUsuario){
         $row = self::$db->getRow("select * from public.SG_USUARIOS where codigo_usuario = ?", array("{$codigoUsuario}"));
-        //$this->numReg = pg_num_rows($row);
         
         $lobUsuario = new CSgUsuario($row{'codigo_usuario'}, $row{'codigo_persona'}, $row{'clave'}, $row{'estado'});
         return $lobUsuario;

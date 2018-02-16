@@ -12,7 +12,6 @@ $pUserName = $_SESSION['SSUserName'];
 </head>
 <body>
     <header></header>
-    <h2>Crear Registro de Medicos </h2>
     
     <form action="medicosRegistrarseDML.php?tipoOperacion=1" method="post">
     <fieldset>

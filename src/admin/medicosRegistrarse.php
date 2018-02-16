@@ -26,7 +26,6 @@ $pUserName = $_SESSION['SSUserName'];
 <body>
     <header>
     </header>
-    <h2>Administración de Registros de Usuarios</h2>
     <table>
     <tr>
         <th>Cod.Persona</th>

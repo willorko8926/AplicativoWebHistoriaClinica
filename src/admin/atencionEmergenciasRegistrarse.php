@@ -26,7 +26,6 @@ $pUserName = $_SESSION['SSUserName'];
 <body>
     <header>
     </header>
-    <h2>Administración de Registros de Atencion de Emergencias</h2>
     <table>
     <tr>
         <th>Numero de Atencion</th>

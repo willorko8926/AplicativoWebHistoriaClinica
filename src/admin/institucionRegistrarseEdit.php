@@ -13,7 +13,6 @@ $pUserName = $_SESSION['SSUserName'];
 <body>
     <header>
     </header> 
-    <h2>Modificación de Registros de Instituciones de salud</h2>
     
     <?php
         include_once("CRegIstitucionCollector.php");

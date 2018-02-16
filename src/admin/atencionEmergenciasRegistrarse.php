@@ -69,7 +69,7 @@ $pUserName = $_SESSION['SSUserName'];
         <div class="block">
           <div class="row">
             <div class="col-md-12 col-sm-12">
-              <h4 class="underline">Registro de Usuario</h4>
+              <h4 class="underline">Registro de Atenciones de Emergencia</h4>
             </div>
           </div>
 
@@ -80,7 +80,7 @@ $pUserName = $_SESSION['SSUserName'];
           <form action="../../admin.php" method="POST">
               <table id="examen-list">
                 <tr>
-                  <th class="col-center">Numero de Atencion</th>
+                  <th class="col-center">Numero Atencion</th>
                   <th class="col-left">Codigo Persona</th>
                   <th class="col-left">Codigo Institucion</th>
                   <th class="col-left">Codigo Medico</th>

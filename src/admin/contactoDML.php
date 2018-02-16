@@ -19,14 +19,13 @@ $pUserName = $_SESSION['SSUserName'];
     if (isset($_GET['tipoOperacion'])){
         $tipoOperacion = $_GET["tipoOperacion"];
         if ($tipoOperacion == 1){
-            $numeroContacto = $_POST["txtNumContacto"];
             $nombres = $_POST["txtNombres"];
             $correo = $_POST["txtCorreo"];
             $asunto = $_POST["txtAsunto"];
             $mensaje = $_POST["txtMensaje"];
             
             $lobContactoCollector = new CContactoCollector();
-            $lobContactoCollector->insertREC($numeroContacto, $nombres, $correo, $asunto, $mensaje);
+            $lobContactoCollector->insertREC($nombres, $correo, $asunto, $mensaje);
             echo "Contacto Creado Exitosamente...";
         }
         if ($tipoOperacion == 2){

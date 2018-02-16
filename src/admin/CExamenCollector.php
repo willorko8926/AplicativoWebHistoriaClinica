@@ -1,19 +1,8 @@
 <?php
-session_start();
-include_once($_SERVER['DOCUMENT_ROOT'] . "/src/lib/pllGeneral.php");
-
-if (mVerificaSesion() != 1){
-    header('location:fault.php');
-}
-$pUserName = $_SESSION['SSUserName'];
-?>
-<?php
 include_once("CMgExamen.php");
 include_once("../db/Collector.php");
 class CExamenCollector extends Collector
 {
-
-
     function selectALL(){
         $rows = self::$db->getRows("select * from public.hc_examenes_laboratorio");
         $arrayData = array();
@@ -31,26 +20,13 @@ class CExamenCollector extends Collector
         
         return $lobExamen;
     }
-
-      
     
-    function updateALL($codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado){
-        if (empty($numero_examen)) {
+    function updateALL($numero_examen, $codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado){
             $updaterow = self::$db->updateRow("UPDATE public.hc_examenes_laboratorio SET codigo_persona = ?, codigo_institucion = ?, codigo_medico = ?, fecha_examen = ?, tipo_examen = ?, consideraciones_examen = ?, explicacion_resultado = ? WHERE numero_examen = ?", array("{$codigo_persona}","{$codigo_institucion}","{$codigo_medico}","{$fecha_examen}","{$tipo_examen}","{$consideraciones_examen}","{$explicacion_resultado}",$numero_examen));
-        }else{
-
-            $updaterow = self::$db->updateRow("UPDATE public.hc_examenes_laboratorio SET codigo_persona = ?, codigo_institucion = ?, codigo_medico = ?, fecha_examen = ?, tipo_examen = ?, consideraciones_examen = ?, explicacion_resultado = ? ", array("{$direccion}","{$celular}","{$correo_electronico}","{$codigo_pais_residencia}",$numero_examen));
-        }
     }
-    
 
-    function insertREC($numero,$codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado){
-        if (empty($numero_examen)) {
-            $insertarow = self::$db->insertRow("INSERT INTO public.hc_examenes_laboratorio (numero,codigo_persona, codigo_institucion, codigo_medico, fecha_examen, tipo_examen, consideraciones_examen, explicacion_resultado) VALUES (?,?,?,?,?,?,?,?)", array ("{$numero}","{$codigo_persona}","{$codigo_institucion}","{$codigo_medico}","{$fecha_examen}","{$tipo_examen}","{$consideraciones_examen}","{$explicacion_resultado}"));
-        }
-        else{
-            $insertarow = self::$db->insertRow("INSERT INTO public.hc_examenes_laboratorio (numero,codigo_persona, codigo_institucion, codigo_medico, fecha_examen, tipo_examen, consideraciones_examen, explicacion_resultado) VALUES (?,?,?,?,?,?,?,?)", array ("{$numero}","{$codigo_persona}","{$codigo_institucion}","{$codigo_medico}","{$fecha_examen}","{$tipo_examen}","{$consideraciones_examen}","{$explicacion_resultado}"));
-        }
+    function insertREC($codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado){
+            $insertarow = self::$db->insertRow("INSERT INTO public.hc_examenes_laboratorio (codigo_persona, codigo_institucion, codigo_medico, fecha_examen, tipo_examen, consideraciones_examen, explicacion_resultado) VALUES (?,?,?,?,?,?,?)", array ("{$codigo_persona}","{$codigo_institucion}","{$codigo_medico}","{$fecha_examen}","{$tipo_examen}","{$consideraciones_examen}","{$explicacion_resultado}"));
     }    
 
     function deleteREC($id){

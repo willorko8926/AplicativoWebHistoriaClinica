@@ -79,20 +79,12 @@ $pUserName = $_SESSION['SSUserName'];
 <!--Consulta de Datos de la Tabla-->
 <!--Cabecera de la Tabla-->
     <form action="contactoDML.php?tipoOperacion=1" method="post">
-        <div class="row">
-           <div class="col-md-2 col-sm-2">
-        <label>Núm. Contacto: </label>
-        </div>
-              <div class="col-md-4 col-sm-4">
-        <input type="text" name="txtNumContacto" autofocus><br>
-        </div>
-            </div>
             <div class="row">
               <div class="col-md-2 col-sm-2">
         <label>Nombres: </label>
         </div>
               <div class="col-md-4 col-sm-4">
-        <input type="text" name="txtNombres"><br>
+        <input type="text" name="txtNombres" required><br>
         </div>
             </div>
             <div class="row">
@@ -100,7 +92,7 @@ $pUserName = $_SESSION['SSUserName'];
         <label>Correo Electrónico: </label>
         </div>
               <div class="col-md-4 col-sm-4">
-        <input type="text" name="txtCorreo"><br>
+        <input type="text" name="txtCorreo" required><br>
         </div>
             </div>
             <div class="row">
@@ -108,7 +100,7 @@ $pUserName = $_SESSION['SSUserName'];
         <label>Asunto: </label>
         </div>
               <div class="col-md-4 col-sm-4">
-        <input type="text" name="txtAsunto"><br>
+        <input type="text" name="txtAsunto" required><br>
         </div>
             </div>
             <div class="row">
@@ -116,7 +108,7 @@ $pUserName = $_SESSION['SSUserName'];
         <label>Mensaje: </label>
         </div>
               <div class="col-md-4 col-sm-4">
-        <input type="text" name="txtMensaje"><br>
+        <input type="text" name="txtMensaje" required><br>
               </div>
             </div>
             <div class="row">

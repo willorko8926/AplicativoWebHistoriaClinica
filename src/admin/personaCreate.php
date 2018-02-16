@@ -79,7 +79,14 @@ $pUserName = $_SESSION['SSUserName'];
 <!--Consulta de Datos de la Tabla-->
 <!--Cabecera de la Tabla-->
     <form action="personaDML.php?tipoOperacion=1" method="post">            
-           
+            <div class="row">
+              <div class="col-md-2 col-sm-2">
+                <label>Num. Identificación: </label>
+              </div>
+              <div class="col-md-4 col-sm-4">
+                <input type="text" name="txtIdentificacion"><br>
+              </div>
+            </div>
             <div class="row">
               <div class="col-md-2 col-sm-2">
                 <label>Nombres: </label>

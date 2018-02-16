@@ -81,18 +81,10 @@ $pUserName = $_SESSION['SSUserName'];
           <form action="examenDML.php?tipoOperacion=1" method="post">
             <div class="row">
               <div class="col-md-2 col-sm-2">
-                <label>Numero Examen: </label>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                <input type="text" name="txtNumExamen" autofocus><br>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-2 col-sm-2">
                 <label>Codigo Persona : </label>
               </div>
               <div class="col-md-4 col-sm-4">
-                <input type="text" name="txtcodigo_persona"><br>
+                <input type="text" name="txtcodigo_persona" autofocus><br>
               </div>
             </div>
             <div class="row">

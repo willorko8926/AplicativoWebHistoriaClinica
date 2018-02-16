@@ -80,19 +80,11 @@ $pUserName = $_SESSION['SSUserName'];
 <!--Cabecera de la Tabla-->
     <form action="atencionConsultasDML.php?tipoOperacion=1" method="post">
         <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <label>Núm. Atención: </label>
-            </div>
-            <div class="col-md-4 col-sm-4">    
-              <input type="text" name="txtNumAtencion" autofocus><br>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md-2 col-sm-2">        
-                <label>Código Usuario: </label>
+                <label>Código Persona: </label>
             </div>
             <div class="col-md-4 col-sm-4">
-                <input type="text" name="txtCodUsuario" autofocus><br>
+                <input type="text" name="txtCodPersona" autofocus><br>
             </div>
         </div>
         <div class="row">

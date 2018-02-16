@@ -24,7 +24,7 @@ $pUserName = $_SESSION['SSUserName'];
         $lobPersonaContacto = $lobPersonaContactoCollector->selectPK($id);
     ?>
     
-    <form action="personaDML.php?tipoOperacion=2" method="post">
+    <form action="personaContactoDML.php?tipoOperacion=2" method="post">
     <fieldset>
 
         

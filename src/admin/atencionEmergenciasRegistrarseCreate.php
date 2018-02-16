@@ -81,8 +81,7 @@ $pUserName = $_SESSION['SSUserName'];
     
     <form action="atencionEmergenciasRegistrarseDML.php?tipoOperacion=1" method="post">
     <fieldset>
-        <label>Núm. Atencion: </label><input type="text" name="txtNumeroAtencion" autofocus><br><br>
-        <label>Cod. Persona: </label><input type="text" name="txtCodPersona"><br><br>
+        <label>Cod. Persona: </label><input type="text" name="txtCodPersona" autofocus><br><br>
         <label>Cod. Institucion: </label><input type="text" name="txtCodInstitucion"><br><br>
         <label>Cod. Medico: </label><input type="text" name="txtCodMedico"><br><br>
         <label>Fecha de Atencion: </label><input type="text" name="txtFechaAtencion"><br><br>

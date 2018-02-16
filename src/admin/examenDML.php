@@ -14,15 +14,11 @@ $pUserName = $_SESSION['SSUserName'];
     <header>
     </header>
 <?php
-  
-  
-        
     include_once("CExamenCollector.php");
     
     if (isset($_GET['tipoOperacion'])){
         $tipoOperacion = $_GET["tipoOperacion"];
         if ($tipoOperacion == 1){
-            $numero= $_POST["txtNumExamen"];
             $codigo_persona = $_POST["txtcodigo_persona"];
             $codigo_institucion = $_POST["txtcodigo_institucion"];
             $codigo_medico = $_POST["txtcodigo_medico"];
@@ -31,14 +27,13 @@ $pUserName = $_SESSION['SSUserName'];
             $consideraciones_examen = $_POST["txtconsideraciones_examen"];
             $explicacion_resultado = $_POST["txtexplicacion_examen"];
 
-                    
             $lobExamenCollector = new CExamenCollector();
-            $lobExamenCollector->insertREC($numero,$codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado);
+            $lobExamenCollector->insertREC($codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado);
             echo "Registro Creado Exitosamente...";
         }
 
         if ($tipoOperacion == 2){
-         
+            $numero = $_POST["txtNumExamen"];
             $codigo_persona = $_POST["codigo_persona"];           
             $codigo_institucion = $_POST["codigo_institucion"];
             $codigo_medico = $_POST["codigo_medico"];
@@ -48,7 +43,7 @@ $pUserName = $_SESSION['SSUserName'];
             $explicacion_resultado = $_POST["explicacion_resultado"];
             
             $lobExamenCollector = new CExamenCollector();
-            $lobExamenCollector->updateALL($codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado);
+            $lobExamenCollector->updateALL($numero, $codigo_persona, $codigo_institucion, $codigo_medico, $fecha_examen, $tipo_examen, $consideraciones_examen, $explicacion_resultado);
             echo "Registro Actualizado Exitosamente...";
         }
         if ($tipoOperacion == 3){

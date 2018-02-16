@@ -70,7 +70,7 @@ $pUserName = $_SESSION['SSUserName'];
         <div class="block">
           <div class="row">
             <div class="col-md-12 col-sm-12">
-              <h4 class="underline">Registro de Usuario</h4>
+              <h4 class="underline">Registro de Instituciones</h4>
             </div>
           </div>
 

@@ -1,13 +1,4 @@
 <?php
-session_start();
-include_once($_SERVER['DOCUMENT_ROOT'] . "/src/lib/pllGeneral.php");
-
-if (mVerificaSesion() != 1){
-    header('location:fault.php');
-}
-$pUserName = $_SESSION['SSUserName'];
-?>
-<?php
 include_once("CHcAtencionEmergencias.php");
 include_once("../db/Collector.php");
 class CRegAtencionEmergenciasCollector extends Collector
@@ -34,8 +25,8 @@ class CRegAtencionEmergenciasCollector extends Collector
             $updaterow = self::$db->updateRow("UPDATE public.hc_atencion_emergencias SET codigo_persona = ?, codigo_institucion = ?, codigo_medico = ?, fecha_atencion = ?, tipo_emergencia = ?, diagnostico = ? WHERE numero_atencion = ?", array("{$codigoPersona}","{$codigoInstitucion}","{$codigoMedico}","{$fechaAtencion}","{$tipoEmergencia}","{$diagnostico}",$numeroAtencion));
     }
     
-    function insertREC($numeroAtencion, $codigoPersona, $codigoInstitucion, $codigoMedico, $fechaAtencion, $tipoEmergencia, $diagnostico){
-            $insertarow = self::$db->insertRow("INSERT INTO public.hc_atencion_emergencias (numero_atencion, codigo_persona, codigo_institucion, codigo_medico, fecha_atencion, tipo_emergencia, diagnostico) VALUES (?,?,?,?,?,?,?)", array ("{$numeroAtencion}","{$codigoPersona}","{$codigoInstitucion}","{$codigoMedico}","{$fechaAtencion}","{$tipoEmergencia}","{$diagnostico}"));
+    function insertREC($codigoPersona, $codigoInstitucion, $codigoMedico, $fechaAtencion, $tipoEmergencia, $diagnostico){
+            $insertarow = self::$db->insertRow("INSERT INTO public.hc_atencion_emergencias (codigo_persona, codigo_institucion, codigo_medico, fecha_atencion, tipo_emergencia, diagnostico) VALUES (?,?,?,?,?,?)", array ("{$codigoPersona}","{$codigoInstitucion}","{$codigoMedico}","{$fechaAtencion}","{$tipoEmergencia}","{$diagnostico}"));
     }    
 
     function deleteREC($id){

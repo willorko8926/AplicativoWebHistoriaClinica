@@ -26,9 +26,9 @@ class CContactoCollector extends Collector
             $updaterow = self::$db->updateRow("UPDATE public.mg_contactos SET nombres = ?, correo_electronico = ?, asunto = ?, mensaje = ? WHERE numero_contacto = ?", array("{$nombres}","{$correoElectronico}","{$asunto}","{$mensaje}",$numeroContacto));
     }
     
-    function insertREC($numeroContacto, $nombres, $correoElectronico, $asunto, $mensaje){
+    function insertREC($nombres, $correoElectronico, $asunto, $mensaje){
     
-            $insertarow = self::$db->insertRow("INSERT INTO public.mg_contactos (numero_contacto, nombres,  correo_electronico, asunto, mensaje) VALUES (?,?,?,?,?)", array ("{$numeroContacto}","{$nombres}","{$correoElectronico}","{$asunto}","{$mensaje}"));
+            $insertarow = self::$db->insertRow("INSERT INTO public.mg_contactos (nombres,  correo_electronico, asunto, mensaje) VALUES (?,?,?,?)", array ("{$nombres}","{$correoElectronico}","{$asunto}","{$mensaje}"));
     }    
 
     function deleteREC($id){

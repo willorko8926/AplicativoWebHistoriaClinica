@@ -82,7 +82,7 @@ $pUserName = $_SESSION['SSUserName'];
               <table id="examen-list">
                 <tr>
 
-               <th>ID </th>
+               <th>ID Persona</th>
               <th>Direccion</th>
             <th>Celular</th>
             <th>Correo Electronico</th>

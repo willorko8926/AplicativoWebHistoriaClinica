@@ -1,19 +1,8 @@
 <?php
-session_start();
-include_once($_SERVER['DOCUMENT_ROOT'] . "/src/lib/pllGeneral.php");
-
-if (mVerificaSesion() != 1){
-    header('location:fault.php');
-}
-$pUserName = $_SESSION['SSUserName'];
-?>
-<?php
 include_once("CMgPersonaContacto.php");
 include_once("../db/Collector.php");
 class CPersonaContactoCollector extends Collector
 {
-
-
     function selectALL(){
         $rows = self::$db->getRows("select * from public.mg_personas_contactos");
         $arrayData = array();
@@ -32,22 +21,12 @@ class CPersonaContactoCollector extends Collector
         return $lobPersonaContacto;
     }
     
-
     function updateALL($codigo_persona,$direccion, $celular, $correo_electronico, $codigo_pais_residencia){
-        if (empty($codigo_persona)) {
             $updaterow = self::$db->updateRow("UPDATE public.mg_personas_contactos SET direccion = ?, celular = ?, correo_electronico = ?, codigo_pais_residencia = ? WHERE codigo_persona = ?", array("{$direccion}","{$celular}","{$correo_electronico}","{$codigo_pais_residencia}",$codigo_persona));
-        }else{
-            $updaterow = self::$db->updateRow("UPDATE public.mg_personas_contactos SET direccion = ?, celular = ?, correo_electronico = ?, codigo_pais_residencia = ?", array("{$direccion}","{$celular}","{$correo_electronico}","{$codigo_pais_residencia}",$codigo_persona));
-        } 
-        }
+    }
 
-    function insertREC($direccion, $celular, $correo_electronico, $codigo_pais_residencia){
-        if (empty($codigo_persona)) {
-            $insertarow = self::$db->insertRow("INSERT INTO public.mg_personas_contactos (direccion, celular, correo_electronico, codigo_pais_residencia) VALUES (?,?,?,?)", array ("{$direccion}","{$celular}","{$correo_electronico}","{$codigo_pais_residencia}"));
-        }
-        else{
-            $insertarow = self::$db->insertRow("INSERT INTO public.mg_personas_contactos (direccion, celular, correo_electronico, codigo_pais_residencia) VALUES (?,?,?,?)", array ("{$direccion}","{$celular}","{$correo_electronico}","{$codigo_pais_residencia}"));
-        }
+    function insertREC($codigo_persona,$direccion, $celular, $correo_electronico, $codigo_pais_residencia){
+            $insertarow = self::$db->insertRow("INSERT INTO public.mg_personas_contactos (codigo_persona, direccion, celular, correo_electronico, codigo_pais_residencia) VALUES (?,?,?,?,?)", array ("{$codigo_persona}","{$direccion}","{$celular}","{$correo_electronico}","{$codigo_pais_residencia}"));
     }    
 
     function deleteREC($id){

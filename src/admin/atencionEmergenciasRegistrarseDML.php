@@ -19,7 +19,6 @@ $pUserName = $_SESSION['SSUserName'];
     if (isset($_GET['tipoOperacion'])){
         $tipoOperacion = $_GET["tipoOperacion"];
         if ($tipoOperacion == 1){
-            $numeroAtencion = $_POST["txtNumeroAtencion"];
             $codigoPersona = $_POST["txtCodPersona"];
             $codigoInstitucion = $_POST["txtCodInstitucion"];
             $codigoMedico = $_POST["txtCodMedico"];
@@ -28,7 +27,7 @@ $pUserName = $_SESSION['SSUserName'];
             $diagnostico = $_POST["txtDiagnostico"];
 
             $lobRegAtencionEmergenciasCollector = new CRegAtencionEmergenciasCollector();
-            $lobRegAtencionEmergenciasCollector->insertREC($numeroAtencion, $codigoPersona, $codigoInstitucion, $codigoMedico, $fechaAtencion, $tipoEmergencia, $diagnostico);
+            $lobRegAtencionEmergenciasCollector->insertREC($codigoPersona, $codigoInstitucion, $codigoMedico, $fechaAtencion, $tipoEmergencia, $diagnostico);
             echo "Registro Creado Exitosamente...";
         }
         if ($tipoOperacion == 2){

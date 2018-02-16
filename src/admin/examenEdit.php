@@ -24,7 +24,7 @@ $pUserName = $_SESSION['SSUserName'];
         $lobExamen = $lobExamenCollector->selectPK($id);
     ?>
     
-    <form action="examamenDML.php?tipoOperacion=2" method="post">
+    <form action="examenDML.php?tipoOperacion=2" method="post">
     <fieldset>
 
          private $numero_examen;
@@ -39,7 +39,7 @@ $pUserName = $_SESSION['SSUserName'];
 
 
         <label>ID : </label>
-        <input type="text" name="numero_examen" value="<?php echo $lobExamen->getNumero_examen(); ?>" readonly>    
+        <input type="text" name="txtNumExamen" value="<?php echo $lobExamen->getNumero_examen(); ?>" readonly>    
         <br><br>
 
         <label>Codigo Persona : </label>

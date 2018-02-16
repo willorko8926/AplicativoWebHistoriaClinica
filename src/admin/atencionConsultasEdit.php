@@ -98,10 +98,10 @@ $pUserName = $_SESSION['SSUserName'];
         </div>
         <div class="row">
             <div class="col-md-2 col-sm-2">
-                <label>Código Usuario: </label>
+                <label>Código Persona: </label>
             </div>
             <div class="col-md-4 col-sm-4">
-                <input type="text" name="txtCodUsuario" value="<?php echo $lobAtencionConsultas->getCodigoPersona(); ?>"><br><br>
+                <input type="text" name="txtCodPersona" value="<?php echo $lobAtencionConsultas->getCodigoPersona(); ?>"><br><br>
             </div>
         </div>
         <div class="row">

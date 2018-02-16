@@ -19,33 +19,31 @@ $pUserName = $_SESSION['SSUserName'];
     if (isset($_GET['tipoOperacion'])){
         $tipoOperacion = $_GET["tipoOperacion"];
         if ($tipoOperacion == 1){
-
+            $codigo_persona = $_POST["txtCodigoPersona"];
             $direccion = $_POST["txtDireccion"];
             $celular = $_POST["txtCelular"];
             $correo_electronico = $_POST["txtCorreo"];
             $codigo_pais_residencia = $_POST["txtCodigoPais"];                
             $lobPersonaContactoCollector = new CPersonaContactoCollector();
-    $lobPersonaContactoCollector->insertREC($direccion, $celular, $correo_electronico,$codigo_pais_residencia);
+            $lobPersonaContactoCollector->insertREC($codigo_persona, $direccion, $celular, $correo_electronico, $codigo_pais_residencia);
             echo "Registro Creado Exitosamente...";
         }
         if ($tipoOperacion == 2){
-
             $codigo_persona = $_POST["txtCodigoPersona"];
-            $numero_identificacion = $_POST["txtIdentificacion"];
-            $nombres = $_POST["txtNombres"];
-            $apellidos = $_POST["txtApellidos"];
-            $sexo = $_POST["txtSexo"];
-            $nacionalidad = $_POST["txtNacionalidad"];
+            $direccion = $_POST["txtDireccion"];
+            $celular = $_POST["txtCelular"];
+            $correo_electronico = $_POST["txtCorreo"];
+            $codigo_pais_residencia = $_POST["txtCodigoPais"];                
             
             $lobPersonaContactoCollector = new CPersonaContactoCollector();
-            $lobPersonaContactoCollector->updateALL($codigo_persona,$numero_identificacion, $nombres, $apellidos, $sexo, $nacionalidad);
+            $lobPersonaContactoCollector->updateALL($codigo_persona, $direccion, $celular, $correo_electronico, $codigo_pais_residencia);
             echo "Registro Actualizado Exitosamente...";
         }
         if ($tipoOperacion == 3){
             if (isset($_GET['id'])){
                 $id = $_GET["id"];
                 
-                $lobPersonaCollector = new CPersonacontactoCollector();
+                $lobPersonaCollector = new CPersonaContactoCollector();
                 $lobPersonaCollector->deleteREC($id);
                 echo "Registro Eliminado Exitosamente...";
             }

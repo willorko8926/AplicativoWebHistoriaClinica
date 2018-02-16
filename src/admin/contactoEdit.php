@@ -101,7 +101,7 @@ $pUserName = $_SESSION['SSUserName'];
         <label>Nombres: </label>
                      </div>
               <div class="col-md-4 col-sm-4">
-        <input type="text" name="txtNombres" value="<?php echo $lobContacto->getNombres(); ?>"><br>
+        <input type="text" name="txtNombres" value="<?php echo $lobContacto->getNombres(); ?>" required><br>
         </div>
             </div>
             <div class="row">
@@ -109,14 +109,14 @@ $pUserName = $_SESSION['SSUserName'];
         <label>Correo Electrónico: </label>
                      </div>
               <div class="col-md-4 col-sm-4">
-        <input type="text" name="txtCorreo" value="<?php echo $lobContacto->getCorreoElectronico(); ?>"><br></div>
+        <input type="text" name="txtCorreo" value="<?php echo $lobContacto->getCorreoElectronico(); ?>" required><br></div>
             </div>
             <div class="row">
               <div class="col-md-2 col-sm-2">
         <label>Asunto: </label>
                      </div>
               <div class="col-md-4 col-sm-4">
-        <input type="text" name="txtAsunto" value="<?php echo $lobContacto->getAsunto(); ?>"><br>
+        <input type="text" name="txtAsunto" value="<?php echo $lobContacto->getAsunto(); ?>" required><br>
         </div>
             </div>
             <div class="row">
@@ -124,7 +124,7 @@ $pUserName = $_SESSION['SSUserName'];
         <label>Mensaje: </label>
                      </div>
               <div class="col-md-4 col-sm-4">
-        <input type="text" name="txtMensaje" value="<?php echo $lobContacto->getMensaje(); ?>"><br>
+        <input type="text" name="txtMensaje" value="<?php echo $lobContacto->getMensaje(); ?>" required><br>
               </div>
             </div>
             <div class="row">
